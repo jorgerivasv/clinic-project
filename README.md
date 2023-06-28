@@ -47,12 +47,14 @@ Si deseas contribuir a este proyecto, puedes seguir los pasos a continuación:
 git checkout -b nueva-funcionalidad
 
 3.  Realiza los cambios necesarios y realiza commits:
-1.  git commit -m "Agrega nueva funcionalidad"
 
-1.  Sube tus cambios a tu repositorio remoto:
-1.  git push origin nueva-funcionalidad
+git commit -m "Agrega nueva funcionalidad"
 
-1.  Abre un pull request en este repositorio y describe tus cambios.
+4.  Sube tus cambios a tu repositorio remoto:
+
+git push origin nueva-funcionalidad
+
+5.  Abre un pull request en este repositorio y describe tus cambios.
 
 ## Recursos adicionales
 
@@ -68,4 +70,4 @@ Este proyecto se encuentra bajo la licencia MIT. Puedes consultar el archivo [LI
 
 ## Contacto
 
-Si tienes alguna pregunta o sugerencia relacionada con este proyecto, no dudes en contactarnos en [correo electrónico de la clínica] o visitar nuestro sitio web [enlace a la página web de la clínica].
+Si tienes alguna pregunta o sugerencia relacionada con este proyecto, no dudes en contactarnos en codereggs@gmail.com o visitar nuestro sitio web www.codereggs.tech
