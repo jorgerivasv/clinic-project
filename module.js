@@ -1,5 +1,5 @@
 import handleNavClick, { searchPage } from "./acc/functions.js";
-import tns from "./acc/tiny-slider.js";
+/* import tns from "./acc/tiny-slider.js"; */
 
 const d = document;
 
@@ -20,7 +20,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
   handleNavClick("navbar-burger-btn", "navbarClinic", "navbar-item");
 
   //Init slider
-  tns({
+  /* tns({
     container: ".my-slider",
     loop: true,
     items: 1,
@@ -41,5 +41,5 @@ d.addEventListener("DOMContentLoaded", (e) => {
         items: 3,
       },
     },
-  });
+  }); */
 });
