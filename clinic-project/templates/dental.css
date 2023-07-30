@@ -13,3 +13,37 @@
   opacity: 0.4;
   z-index: -1;
 }
+
+div.dental-card {
+  border: 3px solid var(--light-gray);
+  margin: 0 1rem;
+  border-radius: 8px;
+}
+
+.dental-card-text {
+  border-bottom: none;
+}
+
+div.dental-card-before,
+div.dental-card-after {
+  object-fit: cover;
+  padding: 0;
+  border-top: none;
+  text-align: center;
+  overflow: hidden;
+  margin: 1rem;
+}
+
+div.dental-card-before > img,
+div.dental-card-after > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 10s ease;
+}
+
+div.dental-card-before:hover > img,
+div.dental-card-after:hover > img {
+  transform: scale(2);
+  opacity: 0.8;
+}
