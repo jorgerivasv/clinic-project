@@ -106,6 +106,29 @@ a.navbar-burger:hover {
   color: var(--primary);
 }
 
+a.navbar-link:not(.is-arrowless)::after {
+  border-color: var(--primary);
+}
+
+a.dropdown-link:focus,
+a.dropdown-link:focus-within,
+a.dropdown-link:focus-visible,
+a.dropdown-link:hover {
+  background-color: var(--black);
+}
+
+div.navbar-dropdown {
+  border-top: none;
+}
+
+div.navbar-item.has-dropdown:hover .navbar-link {
+  background-color: var(--black);
+  color: var(--white);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  opacity: 0.7;
+}
+
 @media all and (min-width: 1025px) {
   #navbarClinic {
     background-color: transparent;
