@@ -34,7 +34,7 @@ export function searchPage(link) {
       const doc = parser.parseFromString(data, "text/html");
       const $bodyChildren = doc.querySelector("body");
       document.getElementById("content").innerHTML = $bodyChildren.innerHTML;
-      if (link === "/clinic-project/templates/home.html") {
+      if (link === "/templates/home.html") {
         tns({
           mode: "carousel", // or 'gallery'
           mouseDrag: true,
