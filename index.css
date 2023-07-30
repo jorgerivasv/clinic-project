@@ -1,0 +1,147 @@
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --light-gray: #999894;
+  --primary: #00d1b2;
+}
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: "Prompt", sans-serif;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+article {
+  padding: 4rem 0;
+}
+
+div.container {
+  width: 100vw;
+  display: flex;
+  position: static;
+}
+
+nav.navbar {
+  background-color: transparent;
+}
+
+.navbar-menu,
+.navbar-menu.is-active {
+  background-color: var(--black);
+}
+
+a.navbar-item {
+  color: var(--white);
+}
+
+.navbar-start > a.navbar-item:hover,
+.navbar-start > a.navbar-item:focus,
+.navbar-start > a.navbar-item:focus-within {
+  color: var(--white);
+  background-color: initial;
+  opacity: 0.7;
+}
+
+footer.footer {
+  background-color: var(--black);
+  z-index: 1;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-grow: 1;
+}
+
+/*Initial section*/
+#background-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  min-width: 100vw;
+  min-height: 100vh;
+  opacity: 0.7;
+  max-width: initial;
+}
+
+#video-section {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  color: white;
+  padding: 1rem;
+  height: calc(100vh - 52px);
+  z-index: 1;
+}
+
+#video-section > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+.video-text {
+  z-index: 2;
+}
+
+.card-image > figure > img {
+  object-fit: cover;
+}
+
+a.navbar-burger,
+a.navbar-burger:hover {
+  color: var(--primary);
+}
+
+@media all and (min-width: 1025px) {
+  #navbarClinic {
+    background-color: transparent;
+  }
+  #video-section {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  #video-section > div {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  .navbar-burger {
+    color: transparent;
+  }
+}
+
+/*Service section*/
+
+#service-section {
+  overflow: hidden;
+  z-index: 1;
+  background-color: var(--black);
+}
+
+#service-section > div {
+  flex-direction: column;
+}
+
+/*Our team section*/
+
+#ourteam-section {
+  overflow: hidden;
+  z-index: 1;
+  background-color: var(--black);
+  display: block;
+}
