@@ -26,9 +26,7 @@ div.dental-card {
 
 div.dental-card-before,
 div.dental-card-after {
-  object-fit: cover;
   padding: 0;
-  border-top: none;
   text-align: center;
   overflow: hidden;
   margin: 1rem;
