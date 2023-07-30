@@ -2119,5 +2119,5 @@ var tns = (function () {
   };
   return aa;
 })();
-//# sourceMappingURL=../sourcemaps/tiny-slider.js.map
+//# sourceMappingURL=../acc/tiny-slider.js.map
 export default tns;
