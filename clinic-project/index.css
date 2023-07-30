@@ -20,16 +20,25 @@ body {
 
 article {
   padding: 4rem 0;
+  height: 100vh;
 }
 
 div.container {
   width: 100vw;
   display: flex;
   position: static;
+  min-height: 100%;
 }
 
 nav.navbar {
   background-color: transparent;
+}
+
+.navbar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
 }
 
 .navbar-menu,
@@ -145,6 +154,9 @@ div.navbar-item.has-dropdown:hover .navbar-link {
   }
   .navbar-burger {
     color: transparent;
+  }
+  .navbar-container {
+    flex-direction: row;
   }
 }
 
