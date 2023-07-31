@@ -7,7 +7,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
   const page = window.page;
 
   page("/", () => {
-    searchPage("/templates/dental.html");
+    searchPage("/templates/home.html");
   });
   page("/dental", () => searchPage("templates/dental.html"));
   page("/lab-dental", () => searchPage("/templates/lab-dental.html"));
