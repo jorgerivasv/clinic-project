@@ -6,7 +6,7 @@ const server = http.createServer((req, res) => {
   // Obtener la ruta del archivo solicitado
   let filePath = path.join(__dirname, req.url === "/" ? "index.html" : req.url);
   let errorPath = path.join(__dirname, "/templates/404.html");
-  console.log("file path", filePath, "req url", req.url);
+
   // Verificar si el archivo existe
   fs.access(filePath, fs.constants.F_OK, (err) => {
     if (err) {
@@ -66,5 +66,5 @@ const port = 3000;
 
 // Iniciar el servidor
 server.listen(port, () => {
-  console.log(`Servidor web funcionando en http://localhost:${port}/`);
+  console.log(`Servidor web funcionando.`);
 });
