@@ -21,6 +21,7 @@ body {
 article {
   padding: 4rem 0;
   min-height: 100vh;
+  z-index: 1;
 }
 
 div.container {
@@ -270,6 +271,37 @@ div.navbar-item.has-dropdown:hover .navbar-link {
   animation: bounce_613 0.4s linear;
 }
 
+/*How work section*/
+.how-work-section {
+  background-color: var(--black);
+}
+
+.how-work-card {
+  background-color: var(--white);
+  border: 1px solid var(--light-gray);
+  border-radius: 8px;
+  color: var(--black);
+  padding: 2rem;
+}
+
+.how-work-image {
+  background-color: var(--light-gray);
+  border-radius: 50%;
+  max-width: 100px;
+  max-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  margin-bottom: 1rem;
+}
+
+.slider-img {
+  max-height: 500px;
+}
+
+.slider-img:hover {
+}
 @keyframes bounce_613 {
   40% {
     transform: scale(1.4);

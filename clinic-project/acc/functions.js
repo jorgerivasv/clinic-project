@@ -50,7 +50,7 @@ export function searchPage(link) {
           lazyload: false,
           lazyloadSelector: ".tns-lazy",
           speed: 700,
-          startIndex: 1,
+          startIndex: 0,
           responsive: {
             0: {
               items: 1,
