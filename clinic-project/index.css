@@ -296,12 +296,6 @@ div.navbar-item.has-dropdown:hover .navbar-link {
   margin-bottom: 1rem;
 }
 
-.slider-img {
-  max-height: 500px;
-}
-
-.slider-img:hover {
-}
 @keyframes bounce_613 {
   40% {
     transform: scale(1.4);
