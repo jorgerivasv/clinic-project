@@ -68,11 +68,15 @@ ul.slider img {
   }
 }
 
+.card-services {
+  height: 100%;
+}
+
 /*Custom Box CSS*/
 
 .card-workers {
   position: relative;
-  max-height: 600px;
+  max-height: 450px;
   background: var(--black);
   overflow: hidden;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
