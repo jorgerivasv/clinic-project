@@ -1,0 +1,8 @@
+#telefonoError,
+#nombreError {
+  display: none;
+}
+
+.gmaps > img {
+  width: 100%;
+}

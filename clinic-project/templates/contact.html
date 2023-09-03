@@ -5,11 +5,63 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
 
 <body>
   <section>
-    <p>Contact</p>
+    <article class="black-bg">
+      <div class="container d-flex is-flex-direction-column is-align-items-center is-justify-content-center w-100">
+        <p class="has-text-white is-size-2 is-uppercase pb-6">¿Necesitas más información? Escríbenos</p>
+        <div class="columns w-100 pt-6">
+          <div class="column is-8">
+            <form id="myForm">
+              <div class="field">
+                <label class="label has-text-white">Nombre</label>
+                <div class="control">
+                  <input class="input" type="text" id="nombre" placeholder="Ingresa tu nombre" required>
+                </div>
+                <p class="help is-danger" id="nombreError">Por favor, ingresa tu nombre.</p>
+              </div>
+
+              <div class="field">
+                <label class="label has-text-white">Teléfono de Contacto</label>
+                <div class="control">
+                  <input class="input" type="tel" id="telefono" placeholder="Ingresa tu teléfono" required>
+                </div>
+                <p class="help is-danger" id="telefonoError">Por favor, ingresa un número de teléfono válido.</p>
+              </div>
+
+              <div class="field">
+                <label class="label has-text-white">Texto</label>
+                <div class="control">
+                  <textarea class="textarea" id="texto" placeholder="Ingresa un texto" maxlength="250"></textarea>
+                </div>
+              </div>
+
+              <div class="field">
+                <div class="control">
+                  <button class="button is-primary" type="submit">Enviar</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="column is-4 ">
+            <div class="is-flex is-flex-direction-column is-align-items-flex-start is-justify-content-center"><a
+                class="button is-primary my-4 mt-5"><iconify-icon icon="ic:twotone-map"
+                  style="color: white; margin-right: 1rem" width="30" height="30"></iconify-icon>Nos encontramos
+                aquí</a>
+              <a class="button is-primary my-4"><iconify-icon icon="ic:baseline-whatsapp"
+                  style="color: white; margin-right: 1rem;" width="30" height="30"></iconify-icon>Whatsapp</a>
+              <a class="button is-primary my-4"><iconify-icon icon="foundation:telephone"
+                  style="color: white; margin-right: 1rem" width="30" height="30"></iconify-icon>Teléfono</a>
+            </div>
+          </div>
+        </div>
+        <div class="gmaps w-100"><img src="../public/contact/gmaps.jpg" width="500" height="500" alt="gmaps-image" />
+        </div>
+      </div>
+    </article>
   </section>
 
 </body>
