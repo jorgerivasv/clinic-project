@@ -1,0 +1,45 @@
+.dental-tab {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.active-content {
+  display: block !important;
+}
+
+.tabs-content > div {
+  display: none;
+}
+
+.tab-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
+  border-radius: 8px;
+  border: 1px solid var(--light-gray);
+  width: auto;
+}
+
+.is-active {
+  opacity: 0.9;
+}
+
+.tabs ul {
+  justify-content: space-around !important;
+}
+
+.tabs.is-fullwidth li {
+  flex-grow: unset !important;
+  flex-shrink: unset !important;
+}
+
+.tabs ul li {
+  min-width: 300px;
+}
+
+.tabs ul li div {
+  padding: 1rem;
+}
