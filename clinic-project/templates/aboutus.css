@@ -1,0 +1,18 @@
+.about-image {
+  width: 100%;
+}
+.point-aboutus {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem 0;
+}
+
+.point-aboutus::before {
+  content: "";
+  border-left: 3px solid var(--primary);
+  display: block;
+  width: 3px;
+  height: 60px;
+  margin-right: 3rem;
+}
