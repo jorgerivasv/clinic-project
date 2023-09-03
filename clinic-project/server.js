@@ -3,50 +3,48 @@ const fs = require("fs");
 const path = require("path");
 
 const server = http.createServer((req, res) => {
-  // Obtener la ruta del archivo solicitado
+  // Obtain routes
   let filePath = path.join(__dirname, req.url === "/" ? "index.html" : req.url);
-  let errorPath = path.join(__dirname, "/templates/404.html");
-
-  // Verificar si el archivo existe
+  let mainPath = path.join(__dirname, "/index.html");
+  // Verify if file exist
   fs.access(filePath, fs.constants.F_OK, (err) => {
     if (err) {
-      // Si el archivo no existe, responder con un código de estado 404 (No encontrado)
-      fs.readFile(errorPath, (err, content) => {
+      // If file doens't exist error 400
+      fs.readFile(mainPath, (err, content) => {
         if (err) {
-          // Si ocurre un error al leer el archivo, responder con un código de estado 500 (Error interno del servidor)
           res.writeHead(500, { "Content-Type": "text/plain" });
           res.end("500 Internal Server Error");
           return;
         }
 
-        // Configurar las cabeceras de respuesta
-        res.writeHead(200, { "Content-Type": getContentType(errorPath) });
+        // Header config
+        res.writeHead(200, { "Content-Type": getContentType(mainPath) });
 
-        // Enviar el contenido del archivo como respuesta
+        // Send content
         res.end(content);
       });
       return;
     }
 
-    // Leer el contenido del archivo
+    // Read file's content
     fs.readFile(filePath, (err, content) => {
       if (err) {
-        // Si ocurre un error al leer el archivo, responder con un código de estado 500 (Error interno del servidor)
+        // Error 500 if broke
         res.writeHead(500, { "Content-Type": "text/plain" });
         res.end("500 Internal Server Error");
         return;
       }
 
-      // Configurar las cabeceras de respuesta
+      // Config header
       res.writeHead(200, { "Content-Type": getContentType(filePath) });
 
-      // Enviar el contenido del archivo como respuesta
+      // Send content
       res.end(content);
     });
   });
 });
 
-// Función para determinar el tipo de contenido basado en la extensión del archivo
+// File type
 function getContentType(filePath) {
   const extname = path.extname(filePath);
   switch (extname) {
@@ -61,10 +59,9 @@ function getContentType(filePath) {
   }
 }
 
-// Configurar el puerto en el que se ejecutará el servidor
 const port = 3000;
 
-// Iniciar el servidor
+// Init server
 server.listen(port, () => {
-  console.log(`Servidor web funcionando.`);
+  console.log(`Web service working`);
 });

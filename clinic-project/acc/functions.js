@@ -28,26 +28,26 @@ export default function handleNavClick(buttonId, panelId, navItemsClass) {
 }
 
 export function tabHandler() {
-  // Obtener todas las pestañas y sus contenidos
+  //  Obtain all tab and content
   const tabs = document.querySelectorAll(".tabs li");
   const tabContents = document.querySelectorAll(".tabs-content > div");
 
-  // Agregar un evento clic a cada pestaña
+  // Add event to all tab
   tabs.forEach((tab) => {
     tab.addEventListener("click", (e) => {
       e.preventDefault();
       e.stopPropagation();
 
-      // Desactivar todas las pestañas y ocultar sus contenidos
+      // Close  and hide all
       tabs.forEach((t) => t.classList.remove("is-active"));
       tabContents.forEach((content) =>
         content.classList.remove("active-content")
       );
 
-      // Activar la pestaña actual
+      // Activate tab
       tab.classList.add("is-active");
 
-      // Mostrar el contenido de la pestaña correspondiente
+      // Show content
       const tabId = tab.getAttribute("data-tab");
       const tabContent = document.getElementById(tabId);
       if (tabContent) {
