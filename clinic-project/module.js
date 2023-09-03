@@ -9,12 +9,12 @@ d.addEventListener("DOMContentLoaded", (e) => {
   page("/", () => {
     searchPage("/templates/home.html");
   });
-  page("/dental", () => searchPage("templates/dental.html"));
+  page("/dental", () => searchPage("/templates/dental.html"));
   page("/lab-dental", () => searchPage("/templates/lab-dental.html"));
-  page("/gastro", () => searchPage("templates/gastro.html"));
-  page("/about-us", () => searchPage("templates/aboutus.html"));
-  page("/contact", () => searchPage("templates/contact.html"));
-  page("*", () => searchPage("templates/404.html"));
+  page("/gastro", () => searchPage("/templates/gastro.html"));
+  page("/about-us", () => searchPage("/templates/aboutus.html"));
+  page("/contact", () => searchPage("/templates/contact.html"));
+  page("*", () => searchPage("/templates/404.html"));
   page();
 
   //Init nav handler

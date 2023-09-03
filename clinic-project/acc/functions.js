@@ -1,5 +1,5 @@
 import tns from "./tiny-slider.js";
-
+import bulmaAccordion from "./bulmaAccordion.js";
 export default function handleNavClick(buttonId, panelId, navItemsClass) {
   const d = document;
   const $navbarbtn = d.getElementById(buttonId);
@@ -132,6 +132,10 @@ export function searchPage(link) {
             },
           },
         });
+      }
+      if (link === "/templates/gastro.html") {
+        tabHandler();
+        bulmaAccordion().attach();
       }
     })
     .catch((error) => {

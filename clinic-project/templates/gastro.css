@@ -1,0 +1,34 @@
+.accordion > .accordion-body > .accordion-content {
+  height: 0;
+  overflow: hidden;
+  transition: 0.5;
+}
+
+.accordion > .accordion-body > .accordion-content,
+.accordion > .accordion-header [icon="solar:alt-arrow-down-line-duotone"] {
+  transition: all 0.5s ease;
+}
+
+.accordion.is-active > .accordion-body > .accordion-content {
+  height: 150px;
+  padding-top: 2rem;
+}
+
+.accordion.is-active
+  > .accordion-header
+  [icon="solar:alt-arrow-down-line-duotone"] {
+  transform: rotate(180deg);
+}
+
+.accordions {
+  width: 100%;
+}
+
+.accordion {
+  background-color: var(--white);
+  border: 2px dashed var(--light-gray);
+  border-radius: 14px;
+  padding: 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}

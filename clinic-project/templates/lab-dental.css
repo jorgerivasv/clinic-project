@@ -38,8 +38,10 @@
 
 .tabs ul li {
   min-width: 300px;
+  height: 100%;
 }
 
-.tabs ul li div {
+.tabs ul li .tab-options {
   padding: 1rem;
+  height: 100%;
 }
