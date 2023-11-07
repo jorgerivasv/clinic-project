@@ -1,4 +1,6 @@
-import handleNavClick, { searchPage } from "./acc/functions.js";
+import handleNavClick, {
+  searchPage,
+} from "./acc/functions.js";
 
 const d = document;
 

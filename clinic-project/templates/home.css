@@ -72,6 +72,11 @@ ul.slider img {
   height: 100%;
 }
 
+.card-services:hover {
+  animation: pulse;
+  animation-duration: 0.5s;
+  cursor: pointer;
+}
 /*Custom Box CSS*/
 
 .card-workers {
@@ -136,10 +141,10 @@ ul.slider img {
 }
 
 .box1-workers {
-  width: 70%;
-  height: 70%;
-  bottom: -70%;
-  left: -70%;
+  width: 30%;
+  height: 30%;
+  bottom: -30%;
+  left: -30%;
 }
 
 .box1-workers::before {

@@ -66,6 +66,9 @@ export function searchPage(link) {
       const $bodyChildren = doc.querySelector("body");
       document.getElementById("content").innerHTML = $bodyChildren.innerHTML;
       if (link === "/templates/home.html") {
+        //Init service handler
+        handleServiceClick(".card-services");
+        //Handle carousel
         tns({
           mode: "carousel", // or 'gallery'
           mouseDrag: true,
@@ -145,4 +148,36 @@ export function searchPage(link) {
     .catch((error) => {
       console.error("Error al importar el archivo HTML:", error);
     });
+}
+
+export function handleServiceClick(className) {
+  const d = document;
+  const w = window;
+  d.addEventListener("click", (e) => {
+    for (const target of e.path || (e.composedPath && e.composedPath())) {
+      if (target.matches && target.matches(className)) {
+        const $nombreElemento = target.querySelector("p");
+        const linkToClick = (href) => {
+          const link = d.createElement("a");
+          link.setAttribute("href", href);
+          link.style.display = "none";
+          d.body.appendChild(link);
+          link.click();
+        };
+        if ($nombreElemento.textContent.toLowerCase() === "clinica dental") {
+          linkToClick("/dental");
+        } else if (
+          $nombreElemento.textContent.toLowerCase() === "laboratorio dental"
+        ) {
+          linkToClick("/lab-dental");
+        } else if (
+          $nombreElemento.textContent.toLowerCase() ===
+          "laboratorio gastroenterología"
+        ) {
+          linkToClick("/gastro");
+        }
+        break;
+      }
+    }
+  });
 }
