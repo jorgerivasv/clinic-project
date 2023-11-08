@@ -164,7 +164,7 @@ export function handleServiceClick(className) {
           d.body.appendChild(link);
           link.click();
         };
-        if ($nombreElemento.textContent.toLowerCase() === "clinica dental") {
+        if ($nombreElemento.textContent.toLowerCase() === "clínica dental") {
           linkToClick("/dental");
         } else if (
           $nombreElemento.textContent.toLowerCase() === "laboratorio dental"

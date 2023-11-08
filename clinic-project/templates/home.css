@@ -68,8 +68,32 @@ ul.slider img {
   }
 }
 
-.card-services {
+div.card {
+  border-radius: 1rem;
+}
+div.card-services {
   height: 100%;
+  border: #4dfbd9 1px solid;
+}
+
+div.card-services:hover {
+  box-shadow: 0px 0px 15px 1px #4dfbd9;
+}
+
+div.card-image:first-child img {
+  border-radius: 1rem;
+}
+
+div.card-image {
+  height: 70%;
+}
+
+div.card-content {
+  height: 30%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card-services:hover {
