@@ -84,12 +84,7 @@ div.card-image:first-child img {
   border-radius: 1rem;
 }
 
-div.card-image {
-  height: 70%;
-}
-
 div.card-content {
-  height: 30%;
   padding: 1rem;
   display: flex;
   align-items: center;
@@ -118,6 +113,10 @@ div.card-content {
   bottom: 20%;
   transform: translate(50%, 50%);
   transition: all 0.6s ease-in-out;
+  border-radius: 1rem;
+  background-color: var(--primary);
+  border: 1px solid var(--light-gray);
+  padding: 0.5rem;
 }
 
 .logo-workers .logo-svg-workers {
@@ -132,7 +131,8 @@ div.card-content {
   height: 30px;
 }
 
-.icon-workers .svg {
+.icon-workers .svg,
+.icon-workers svg {
   fill: rgba(255, 255, 255, 0.797);
   width: 100%;
   transition: all 0.5s ease-in-out;
@@ -140,6 +140,7 @@ div.card-content {
 
 .box-workers {
   position: absolute;
+  cursor: pointer;
   padding: 10px;
   text-align: right;
   background: rgba(255, 255, 255, 0.389);
@@ -148,7 +149,7 @@ div.card-content {
   border-radius: 10% 13% 42% 0%/10% 12% 75% 0%;
   box-shadow: rgba(100, 100, 111, 0.364) -7px 7px 29px 0px;
   transform-origin: bottom left;
-  transition: all 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .box-workers::before {
@@ -157,14 +158,15 @@ div.card-content {
   inset: 0;
   border-radius: inherit;
   opacity: 0;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
-.box-workers:hover .svg {
+.box-workers .svg {
   fill: white;
 }
 
-.box1-workers {
+.box1-workers,
+.box2-workers {
   width: 30%;
   height: 30%;
   bottom: -30%;
@@ -181,31 +183,23 @@ div.card-content {
   );
 }
 
-.box1-workers:hover::before {
+.box1-workers::before {
   opacity: 1;
 }
 
-.box1-workers:hover .icon-workers .svg {
+.box1-workers .icon-workers .svg {
   filter: drop-shadow(0 0 5px white);
 }
 
-.box2-workers {
-  width: 50%;
-  height: 50%;
-  bottom: -50%;
-  left: -50%;
-  transition-delay: 0.2s;
+.box2-workers::before {
+  background: radial-gradient(circle at 30% 107%, #0a66c2 0%, #82bef7 90%);
 }
 
 .box2-workers::before {
-  background: radial-gradient(circle at 30% 107%, #000000 0%, #181c1d 90%);
-}
-
-.box2-workers:hover::before {
   opacity: 1;
 }
 
-.box2-workers:hover .icon-workers .svg {
+.box2-workers .icon-workers .svg {
   filter: drop-shadow(0 0 5px white);
 }
 
@@ -250,4 +244,26 @@ div.card-content {
   transform: translate(0, 0);
   bottom: 50px;
   right: 50px;
+}
+
+/*Mobile config*/
+
+@media all and (max-width: 767px) {
+  #custom_controlsContainer {
+    display: none;
+  }
+
+  .card-workers:hover {
+    transform: none;
+  }
+
+  .card-workers:hover .box-workers {
+    display: none;
+  }
+
+  .card-workers:hover .logo-workers {
+    right: 50%;
+    bottom: 20%;
+    transform: translate(50%, 50%);
+  }
 }

@@ -66,6 +66,8 @@ export function searchPage(link) {
       const $bodyChildren = doc.querySelector("body");
       document.getElementById("content").innerHTML = $bodyChildren.innerHTML;
       if (link === "/templates/home.html") {
+        //Init workers info handler
+        handleWorkerProfesionalInfo(".card-workers");
         //Init service handler
         handleServiceClick(".card-services");
         //Handle carousel
@@ -78,18 +80,20 @@ export function searchPage(link) {
           loop: true,
           gutter: 0,
           controlsContainer: "#custom_controlsContainer",
-          nextButton: "#prev",
+          prevButton: "#prev",
           nextButton: "#next", // String selector
           arrowKeys: true, // keyboard support
           lazyload: false,
           lazyloadSelector: ".tns-lazy",
           speed: 700,
           startIndex: 0,
+          swipeAngle: false,
           responsive: {
             0: {
               items: 1,
               edgePadding: 30,
-              nav: false,
+              nav: true,
+              controls: false,
             },
             768: {
               items: 3,
@@ -152,26 +156,26 @@ export function searchPage(link) {
 
 export function handleServiceClick(className) {
   const d = document;
-  const w = window;
   d.addEventListener("click", (e) => {
     for (const target of e.path || (e.composedPath && e.composedPath())) {
       if (target.matches && target.matches(className)) {
-        const $nombreElemento = target.querySelector("p");
+        const $elementName = target.querySelector("p");
         const linkToClick = (href) => {
           const link = d.createElement("a");
           link.setAttribute("href", href);
           link.style.display = "none";
           d.body.appendChild(link);
           link.click();
+          link.remove();
         };
-        if ($nombreElemento.textContent.toLowerCase() === "clínica dental") {
+        if ($elementName.textContent.toLowerCase() === "clínica dental") {
           linkToClick("/dental");
         } else if (
-          $nombreElemento.textContent.toLowerCase() === "laboratorio dental"
+          $elementName.textContent.toLowerCase() === "laboratorio dental"
         ) {
           linkToClick("/lab-dental");
         } else if (
-          $nombreElemento.textContent.toLowerCase() ===
+          $elementName.textContent.toLowerCase() ===
           "laboratorio gastroenterología"
         ) {
           linkToClick("/gastro");
@@ -180,4 +184,41 @@ export function handleServiceClick(className) {
       }
     }
   });
+}
+
+export function handleWorkerProfesionalInfo(className) {
+  const d = document;
+  const linkToClick = (href) => {
+    const link = document.createElement("a");
+    link.setAttribute("href", href);
+    link.setAttribute("target", "_blank");
+    link.setAttribute("rel", "noopener noreferrer");
+    link.style.display = "none";
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+  };
+  const actionSelector = (elementName) => {
+    if (elementName.textContent.toLowerCase() === "martin rivas") {
+      linkToClick("https://www.instagram.com/dr.m.rivas/");
+    }
+    if (elementName.textContent.toLowerCase() === "nicole pacheco") {
+      linkToClick(
+        "https://www.linkedin.com/in/nicole-pacheco-herrera-008090173/"
+      );
+    }
+    if (elementName.textContent.toLowerCase() === "jorge rivas") {
+      linkToClick("https://www.linkedin.com/in/jorge-rivas-vesco-253070a1/");
+    }
+  };
+  const clickAction = (e) => {
+    for (const target of e.path || (e.composedPath && e.composedPath())) {
+      if (target.matches && target.matches(className)) {
+        const $elementName = target.querySelector("p");
+        actionSelector($elementName);
+        break;
+      }
+    }
+  };
+  d.addEventListener("click", (e) => clickAction(e));
 }
