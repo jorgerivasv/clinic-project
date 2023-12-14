@@ -1,13 +1,10 @@
-import handleNavClick, {
-  searchPage,
-} from "./acc/functions.js";
+import handleNavClick, { searchPage } from "./acc/functions.js";
 
 const d = document;
 
 d.addEventListener("DOMContentLoaded", (e) => {
   //Init page.js - routing
   const page = window.page;
-
   page("/", () => {
     searchPage("/templates/home.html");
   });

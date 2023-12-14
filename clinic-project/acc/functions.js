@@ -65,6 +65,7 @@ export function searchPage(link) {
       const doc = parser.parseFromString(data, "text/html");
       const $bodyChildren = doc.querySelector("body");
       document.getElementById("content").innerHTML = $bodyChildren.innerHTML;
+      window.scrollTo(0, 0);
       if (link === "/templates/home.html") {
         //Init workers info handler
         handleWorkerProfesionalInfo(".card-workers");
@@ -148,6 +149,47 @@ export function searchPage(link) {
       if (link === "/templates/contact.html") {
         validateForm();
       }
+      if (link === "/templates/aboutus.html") {
+        //Init service handler
+        handleServiceClick(".card-services");
+      }
+      if (link === "/templates/dental.html") {
+        tabHandler();
+        //Init carousel
+        tns({
+          mode: "carousel", // or 'gallery'
+          mouseDrag: true,
+          navPosition: "bottom",
+          autoplay: true,
+          autoplayButtonOutput: false,
+          loop: true,
+          gutter: 0,
+          controlsContainer: "#custom_controlsContainer",
+          prevButton: "#prev",
+          nextButton: "#next", // String selector
+          arrowKeys: true, // keyboard support
+          lazyload: false,
+          lazyloadSelector: ".tns-lazy",
+          speed: 700,
+          startIndex: 0,
+          swipeAngle: false,
+          responsive: {
+            0: {
+              items: 1,
+              edgePadding: 30,
+              nav: true,
+            },
+            768: {
+              items: 3,
+              edgePadding: 0,
+            },
+            1024: {
+              items: 3,
+              edgePadding: 0,
+            },
+          },
+        });
+      }
     })
     .catch((error) => {
       console.error("Error al importar el archivo HTML:", error);
@@ -188,6 +230,7 @@ export function handleServiceClick(className) {
 
 export function handleWorkerProfesionalInfo(className) {
   const d = document;
+  const w = window;
   const linkToClick = (href) => {
     const link = document.createElement("a");
     link.setAttribute("href", href);

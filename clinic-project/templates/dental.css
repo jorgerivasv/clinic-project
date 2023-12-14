@@ -50,23 +50,11 @@ div.dental-card-after:hover > img {
   width: 100%;
 }
 
-.service-six-blk {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: var(--white);
-  border-radius: 8px;
-  border: 1px solid var(--light-gray);
-  min-height: 300px;
-  max-height: 500px;
-  min-width: 100%;
-  max-width: 500px;
-}
-
 .service-six-img {
   margin-bottom: 30px;
   text-align: center;
+  filter: brightness(0) saturate(100%) invert(67%) sepia(36%) saturate(5366%)
+    hue-rotate(129deg) brightness(100%) contrast(101%);
 }
 
 .service-six-blk:hover {
@@ -111,8 +99,15 @@ div.dental-card-after:hover > img {
   overflow: hidden;
   border-radius: 8px;
   color: white;
-  box-shadow: 0px 0px 20px white;
-  padding: 2rem;
+  border: 2px solid var(--light-gray);
+}
+
+.testimonial-body {
+  padding: 0 1rem 1rem 1rem;
+}
+
+.testimonial-body p:nth-child(3) {
+  font-weight: 500 !important;
 }
 
 .experience-section {
