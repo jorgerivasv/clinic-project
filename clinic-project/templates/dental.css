@@ -50,6 +50,21 @@ div.dental-card-after:hover > img {
   width: 100%;
 }
 
+.dental-specialities-img {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 2px solid var(--light-gray);
+}
+
+.dental-specialities-img img {
+  aspect-ratio: 1/1;
+}
+
 .service-six-img {
   margin-bottom: 30px;
   text-align: center;
@@ -74,21 +89,6 @@ div.dental-card-after:hover > img {
   display: block;
   max-width: 100%;
   height: auto;
-}
-
-.disilicato-image {
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.disilicato-image:hover img {
-  transform: scale(1.8);
-}
-
-.disilicato-image img {
-  object-fit: contain;
-  transition: all 2s ease;
-  border-radius: 8px;
 }
 
 .testimonial-card {

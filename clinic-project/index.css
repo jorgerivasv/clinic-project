@@ -81,6 +81,10 @@ nav.navbar {
   background-color: var(--black);
 }
 
+a.navbar-item img {
+  max-height: fit-content;
+}
+
 a.navbar-item {
   color: var(--white);
 }
@@ -226,11 +230,32 @@ div.navbar-item.has-dropdown:hover .navbar-link {
   overflow: hidden;
   z-index: 1;
   background-color: var(--black);
-  display: block;
+}
+#ourteam-section ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#ourteam-section ul li {
+  width: 33.3%;
+}
+#ourteam-section-mobile {
+  overflow: hidden;
+  z-index: 1;
+  background-color: var(--black);
+  display: none;
+}
+@media all and (max-width: 480px) {
+  #ourteam-section-mobile {
+    display: block;
+  }
+  #ourteam-section {
+    display: none;
+  }
 }
 
 /*Card footer*/
-
 .custom-card-footer {
   display: flex;
   height: 50px;
@@ -317,7 +342,7 @@ div.navbar-item.has-dropdown:hover .navbar-link {
 
 .how-work-card {
   background-color: var(--white);
-  border: 1px solid var(--light-gray);
+  border: 1px solid var(--primary);
   border-radius: 8px;
   color: var(--black);
   padding: 2rem;

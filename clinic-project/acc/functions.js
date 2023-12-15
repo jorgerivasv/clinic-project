@@ -132,11 +132,11 @@ export function searchPage(link) {
               nav: false,
             },
             768: {
-              items: 3,
+              items: 4,
               edgePadding: 0,
             },
             1024: {
-              items: 3,
+              items: 4,
               edgePadding: 0,
             },
           },
