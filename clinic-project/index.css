@@ -90,14 +90,16 @@ a.navbar-item {
   padding: 0 1rem;
 }
 
-.navbar-start > a.navbar-item:hover,
-.navbar-start > a.navbar-item:focus,
-.navbar-start > a.navbar-item:focus-within {
+.navbar-start > a.navbar-item:hover {
   color: var(--white);
   background-color: initial;
   opacity: 0.7;
 }
-
+.navbar-start > a.navbar-item:focus,
+.navbar-start > a.navbar-item:focus-within {
+  color: var(--white);
+  background-color: var(--light-gray);
+}
 footer.footer {
   background-color: var(--black);
   z-index: 1;
