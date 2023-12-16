@@ -1,3 +1,5 @@
+global.Headers = require("node-fetch").Headers;
+
 const http = require("http");
 const fs = require("fs");
 const path = require("path");
