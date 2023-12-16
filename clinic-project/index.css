@@ -87,6 +87,7 @@ a.navbar-item img {
 
 a.navbar-item {
   color: var(--white);
+  padding: 0 1rem;
 }
 
 .navbar-start > a.navbar-item:hover,

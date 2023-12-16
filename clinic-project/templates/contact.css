@@ -1,8 +1,24 @@
-#telefonoError,
-#nombreError {
+#input_phone_error,
+#input_name_error,
+#input_description_error {
   display: none;
 }
 
 .gmaps > img {
   width: 100%;
+}
+
+#send_message,
+#send_error_message {
+  display: none;
+}
+
+.contact-buttons a:first-child {
+  margin-top: 2rem;
+}
+.contact-buttons a:nth-child(2) {
+  margin-top: 2.75rem;
+}
+.contact-buttons a:nth-child(3) {
+  margin-top: 2.75rem;
 }

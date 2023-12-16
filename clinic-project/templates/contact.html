@@ -12,54 +12,65 @@
   <section>
     <article class="black-bg">
       <div class="container d-flex is-flex-direction-column is-align-items-center is-justify-content-center w-100">
-        <p class="has-text-white is-size-2 is-uppercase pb-6">¿Necesitas más información? Escríbenos</p>
-        <div class="columns w-100 pt-6">
+        <p class="has-text-white is-size-2 is-uppercase pb-6 px-5">¿Necesitas más información? Escríbenos</p>
+        <div class="columns w-100 py-6">
           <div class="column is-8">
             <form id="myForm">
               <div class="field">
-                <label class="label has-text-white">Nombre</label>
+                <label class="label has-text-white" for="input_name">Nombre</label>
                 <div class="control">
-                  <input class="input" type="text" id="nombre" placeholder="Ingresa tu nombre" required>
+                  <input class="input" type="text" id="input_name" placeholder="Ingresa tu nombre" required>
                 </div>
-                <p class="help is-danger" id="nombreError">Por favor, ingresa tu nombre.</p>
+                <p class="help is-danger" id="input_name_error">Por favor, ingresa tu nombre.</p>
               </div>
 
               <div class="field">
-                <label class="label has-text-white">Teléfono de Contacto</label>
+                <label class="label has-text-white" for="input_phone">Teléfono de Contacto</label>
                 <div class="control">
-                  <input class="input" type="tel" id="telefono" placeholder="Ingresa tu teléfono" required>
+                  <input class="input" type="tel" id="input_phone" placeholder="Ingresa tu teléfono" required>
                 </div>
-                <p class="help is-danger" id="telefonoError">Por favor, ingresa un número de teléfono válido.</p>
+                <p class="help is-danger" id="input_phone_error">Por favor, ingresa un número de teléfono válido.</p>
               </div>
 
               <div class="field">
-                <label class="label has-text-white">Texto</label>
+                <label class="label has-text-white" for="input_description">Texto</label>
                 <div class="control">
-                  <textarea class="textarea" id="texto" placeholder="Ingresa un texto" maxlength="250"></textarea>
+                  <textarea class="textarea" id="input_description" placeholder="Ingresa un texto"
+                    maxlength="250"></textarea>
+                  <p class="help is-danger" id="input_description_error">Por favor, ingresa un texto válido.</p>
                 </div>
               </div>
 
               <div class="field">
-                <div class="control">
-                  <button class="button is-primary" type="submit">Enviar</button>
+                <div class="control is-flex is-align-items-center is-justify-content-flex-start">
+                  <button class="button is-primary" type="submit" id="send_btn">Enviar</button>
+                  <p class="pl-3 has-text-success" id="send_message">✔️ El mensaje ha sido enviado con éxito.</p>
+                  <p class="pl-3 has-text-danger" id="send_error_message">❌Ups ha ocurrido un error, contacte al
+                    administrador.</p>
                 </div>
               </div>
             </form>
           </div>
           <div class="column is-4 ">
-            <div class="is-flex is-flex-direction-column is-align-items-flex-start is-justify-content-center"><a
-                class="button is-primary my-4 mt-5"><iconify-icon icon="ic:twotone-map"
+            <div
+              class="is-flex is-flex-direction-column is-align-items-flex-start is-justify-content-center contact-buttons">
+              <a class="button is-primary"
+                href="https://www.google.com/maps/dir/-33.4398588,-70.6182787/Antonio+Varas+1713,+Oficina+103,+7501205+Santiago,+Providencia,+Regi%C3%B3n+Metropolitana,+Chile/@-33.4410765,-70.6180016,17z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x9662cf83aa70004b:0x52e8b195380c901a!2m2!1d-70.6127748!2d-33.4426699!3e2?entry=ttu"
+                rel="noopener noreferrer" target="_blank"><iconify-icon icon="ic:twotone-map"
                   style="color: white; margin-right: 1rem" width="30" height="30"></iconify-icon>Nos encontramos
                 aquí</a>
-              <a class="button is-primary my-4"><iconify-icon icon="ic:baseline-whatsapp"
+              <a class="button is-primary"
+                href="https://wa.me/56979635540?text=%C2%A1Hola%20Biodentric!%20Estoy%20interesado/a%20en%20conocer%20m%C3%A1s%20sobre%20sus%20servicios%20odontol%C3%B3gicos%20y%20c%C3%B3mo%20pueden%20ayudarme%20a%20sonre%C3%ADr%20con%20confianza.%20%C2%BFPodr%C3%ADan%20proporcionarme%20m%C3%A1s%20informaci%C3%B3n?%20%C2%A1Gracias!"
+                rel="noopener noreferrer" target="_blank"><iconify-icon icon="ic:baseline-whatsapp"
                   style="color: white; margin-right: 1rem;" width="30" height="30"></iconify-icon>Whatsapp</a>
-              <a class="button is-primary my-4"><iconify-icon icon="foundation:telephone"
-                  style="color: white; margin-right: 1rem" width="30" height="30"></iconify-icon>Teléfono</a>
+              <a class="button is-primary" href="tel:+56979635540" rel="noopener noreferrer"
+                target="_blank"><iconify-icon icon="foundation:telephone" style="color: white; margin-right: 1rem"
+                  width="30" height="30"></iconify-icon>Teléfono</a>
             </div>
           </div>
         </div>
-        <div class="gmaps w-100"><img src="../public/contact/gmaps.jpg" width="500" height="500" alt="gmaps-image" />
-        </div>
+        <div id="map" style="width:100%;height:500px;"></div>
+      </div>
       </div>
     </article>
   </section>

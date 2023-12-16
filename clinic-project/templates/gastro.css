@@ -26,7 +26,7 @@
 
 .accordion {
   background-color: var(--white);
-  border: 2px dashed var(--light-gray);
+  border: 2px solid var(--primary);
   border-radius: 14px;
   padding: 1rem;
   width: 100%;

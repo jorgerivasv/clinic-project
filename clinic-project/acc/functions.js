@@ -147,6 +147,8 @@ export function searchPage(link) {
         bulmaAccordion().attach();
       }
       if (link === "/templates/contact.html") {
+        //Init gmaps
+        insertGmapScript();
         validateForm();
       }
       if (link === "/templates/aboutus.html") {
@@ -265,3 +267,14 @@ export function handleWorkerProfesionalInfo(className) {
   };
   d.addEventListener("click", (e) => clickAction(e));
 }
+
+export const insertGmapScript = () => {
+  var script = document.createElement("script");
+  script.async = true;
+  script.defer = true;
+  script.src =
+    "https://maps.googleapis.com/maps/api/js?key=AIzaSyAYvSJ40lctzBAuaDr39ZbpvJeGPd5L0Wc&callback=initMap";
+
+  // Añadir el script al final del body
+  document.body.appendChild(script);
+};

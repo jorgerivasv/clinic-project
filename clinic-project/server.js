@@ -1,8 +1,51 @@
 const http = require("http");
 const fs = require("fs");
 const path = require("path");
+const { Resend } = require("resend");
+const resend = new Resend("re_MhXfpbRY_Jijc959gtsTUKRMkhYsNXGhf");
 
 const server = http.createServer((req, res) => {
+  //Send email endpoint
+  if (req.url === "/send-email" && req.method === "POST") {
+    // Handle POST req
+    let body = "";
+    req.on("data", (chunk) => {
+      body += chunk.toString();
+    });
+    req.on("end", () => {
+      const emailData = JSON.parse(body);
+      if (
+        emailData.name !== null &&
+        emailData.name !== "" &&
+        emailData.phone !== null &&
+        emailData.phone !== "" &&
+        emailData.description !== null &&
+        emailData.description !== ""
+      ) {
+        resend.emails
+          .send({
+            from: "Biodentric <onboarding@resend.dev>",
+            to: ["martinrivasvesco@gmail.com"],
+            subject: `Contacto de parte del cliente ${emailData.name}`,
+            html: `<div><p>El cliente que se contacta tiene por nombre: 
+          ${emailData.name}</p>Nro. de teléfono: ${emailData.phone}<p></p><p>Texto de consulta: ${emailData.description}</p></div>`,
+          })
+          .then(() => {
+            res.writeHead(200, { "Content-Type": "application/json" });
+            res.end(JSON.stringify({ message: "Email enviado con éxito" }));
+          })
+          .catch((error) => {
+            res.writeHead(500, { "Content-Type": "application/json" });
+            res.end(JSON.stringify({ message: "Error al enviar el email" }));
+          });
+      } else {
+        res.writeHead(400, { "Content-Type": "application/json" });
+        res.end(JSON.stringify({ message: "Error al enviar el email" }));
+      }
+    });
+    return;
+  }
+
   // Obtain routes
   let filePath = path.join(__dirname, req.url === "/" ? "index.html" : req.url);
   let mainPath = path.join(__dirname, "/index.html");
