@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "start": "npm i && node server.js"
+  },
   "dependencies": {
     "resend": "^2.0.0"
   }
