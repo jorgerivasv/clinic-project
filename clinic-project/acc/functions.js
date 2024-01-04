@@ -24,6 +24,10 @@ export default function handleNavClick(buttonId, panelId, navItemsClass) {
     ) {
       navAction();
     }
+    if (e.target.classList.contains("navbar-item")) {
+      $navbarbtn.classList.remove("is-active");
+      $panelbtn.classList.remove("is-active");
+    }
   });
 }
 
@@ -66,6 +70,8 @@ export function searchPage(link) {
       const $bodyChildren = doc.querySelector("body");
       document.getElementById("content").innerHTML = $bodyChildren.innerHTML;
       window.scrollTo(0, 0);
+      const AOS = window.AOS;
+      AOS.init();
       if (link === "/templates/home.html") {
         //Init workers info handler
         handleWorkerProfesionalInfo(".card-workers");

@@ -221,6 +221,7 @@ div.navbar-item.has-dropdown:hover .navbar-link {
   overflow: hidden;
   z-index: 1;
   background-color: var(--black);
+  padding-top: 1.5rem;
 }
 
 #service-section > div {
@@ -349,6 +350,7 @@ div.navbar-item.has-dropdown:hover .navbar-link {
   border-radius: 8px;
   color: var(--black);
   padding: 2rem;
+  height: 100%;
 }
 
 .how-work-image {
@@ -416,4 +418,24 @@ div.navbar-item.has-dropdown:hover .navbar-link {
 
 *::-webkit-scrollbar-thumb:active {
   background-color: #004f44;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    scale: 25%;
+  }
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+
+.show-scroll-animation {
+  view-timeline-name: --image;
+  view-timeline-axis: block;
+  animation-timeline: --image;
+  animation-name: show;
+  animation-range: entry 25% cover 50%;
+  animation-fill-mode: both;
 }

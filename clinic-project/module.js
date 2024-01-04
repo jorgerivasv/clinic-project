@@ -5,6 +5,7 @@ const d = document;
 d.addEventListener("DOMContentLoaded", (e) => {
   //Init page.js - routing
   const page = window.page;
+
   page("/", () => {
     searchPage("/templates/home.html");
   });
