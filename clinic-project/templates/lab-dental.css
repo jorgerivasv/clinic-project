@@ -36,10 +36,11 @@
   border: 1px solid var(--primary);
   width: auto;
   cursor: pointer;
+  opacity: 0.4;
 }
 
-.is-active {
-  opacity: 0.8;
+.is-active .tab-options {
+  opacity: 1;
 }
 
 .tabs {
@@ -52,7 +53,7 @@
 }
 
 .tabs ul {
-  justify-content: space-around !important;
+  justify-content: center !important;
 }
 
 .tabs.is-fullwidth li {
@@ -69,8 +70,9 @@
 }
 
 .tabs ul li .tab-options {
-  padding: 1rem;
   height: 100%;
+  color: var(--black);
+  padding-top: 0.5rem;
 }
 
 .carrousel-dental-img {

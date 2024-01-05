@@ -6,6 +6,7 @@
   --black: #1a1e1e;
   --white: #ffffff;
   --light-gray: #999894;
+  --btn-text-color: #003431;
   --primary: #00d1b2;
   --primary-font: "Exo 2", sans-serif;
   --secondary-font: "Fira Sans Extra Condensed", sans-serif;
@@ -438,4 +439,16 @@ div.navbar-item.has-dropdown:hover .navbar-link {
   animation-name: show;
   animation-range: entry 25% cover 50%;
   animation-fill-mode: both;
+}
+
+a.button.is-primary,
+button.button.is-primary {
+  color: var(--btn-text-color);
+  font-weight: 700;
+}
+
+a.button.is-primary:hover iconify-icon[icon="ic:twotone-map"],
+a.button.is-primary:hover iconify-icon[icon="ic:baseline-whatsapp"],
+a.button.is-primary:hover iconify-icon[icon="foundation:telephone"] {
+  color: var(--white) !important;
 }

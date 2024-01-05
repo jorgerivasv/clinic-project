@@ -22,3 +22,9 @@
 .contact-buttons a:nth-child(3) {
   margin-top: 2.75rem;
 }
+
+a.button.is-primary iconify-icon[icon="ic:twotone-map"],
+a.button.is-primary iconify-icon[icon="ic:baseline-whatsapp"],
+a.button.is-primary iconify-icon[icon="foundation:telephone"] {
+  color: var(--btn-text-color) !important;
+}

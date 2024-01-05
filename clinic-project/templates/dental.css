@@ -66,10 +66,7 @@ div.dental-card-after:hover > img {
 }
 
 .service-six-img {
-  margin-bottom: 30px;
   text-align: center;
-  filter: brightness(0) saturate(100%) invert(67%) sepia(36%) saturate(5366%)
-    hue-rotate(129deg) brightness(100%) contrast(101%);
 }
 
 .service-six-blk:hover {
@@ -112,4 +109,8 @@ div.dental-card-after:hover > img {
 
 .experience-section {
   width: 100%;
+}
+
+.tns-item {
+  height: 100%;
 }
