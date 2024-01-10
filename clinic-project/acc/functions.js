@@ -1,6 +1,9 @@
 import tns from "./tiny-slider.js";
 import bulmaAccordion from "./bulmaAccordion.js";
 import validateForm from "./validateForm.js";
+
+const w = window;
+const d = document;
 export default function handleNavClick(buttonId, panelId, navItemsClass) {
   const d = document;
   const $navbarbtn = d.getElementById(buttonId);
@@ -28,6 +31,28 @@ export default function handleNavClick(buttonId, panelId, navItemsClass) {
       $navbarbtn.classList.remove("is-active");
       $panelbtn.classList.remove("is-active");
     }
+  });
+}
+
+export function handleNavSelector(navId) {
+  const d = document;
+  const w = window;
+  const $navBtn = d.querySelectorAll(navId);
+  let selectedBtn;
+  $navBtn.forEach((item) => {
+    if (item.href.split("/")[3] === w.location.pathname.split("/")[1]) {
+      selectedBtn = item;
+    } else {
+      item.classList.remove("is-selected");
+    }
+  });
+  selectedBtn.classList.add("is-selected");
+}
+
+export function navStickyHandler(navbarId) {
+  w.addEventListener("scroll", () => {
+    const header = d.getElementById(navbarId);
+    header.classList.toggle("sticky-navbar", w.scrollY > 0);
   });
 }
 
@@ -69,9 +94,14 @@ export function searchPage(link) {
       const doc = parser.parseFromString(data, "text/html");
       const $bodyChildren = doc.querySelector("body");
       document.getElementById("content").innerHTML = $bodyChildren.innerHTML;
+      //Everytime scroll to top
       window.scrollTo(0, 0);
+      //Handle nav selector
+      handleNavSelector("a.navbar-item");
+      //Start AOS function
       const AOS = window.AOS;
       AOS.init();
+      //Controll all pages
       if (link === "/templates/home.html") {
         //Init workers info handler
         handleWorkerProfesionalInfo(".card-workers");

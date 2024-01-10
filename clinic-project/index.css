@@ -23,6 +23,8 @@ body {
   align-items: stretch;
   justify-content: space-between;
   overflow: hidden;
+
+  position: relative;
 }
 
 .exo-font {
@@ -68,6 +70,18 @@ div.container {
 
 nav.navbar {
   background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: 0.6s;
+}
+
+nav.navbar.sticky-navbar {
+  z-index: 9999;
+  background-color: var(--black);
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--primary);
 }
 
 .navbar-container {
@@ -96,10 +110,10 @@ a.navbar-item {
   background-color: initial;
   opacity: 0.7;
 }
-.navbar-start > a.navbar-item:focus,
-.navbar-start > a.navbar-item:focus-within {
+.navbar-start > a.navbar-item.is-selected {
   color: var(--white);
-  background-color: var(--light-gray);
+  background-color: transparent;
+  border-bottom: 4px solid var(--primary);
 }
 footer.footer {
   background-color: var(--black);
@@ -125,7 +139,7 @@ footer.footer {
   transform: translateX(-50%) translateY(-50%);
   min-width: 100vw;
   min-height: 100vh;
-  opacity: 0.7;
+  opacity: 0.4;
   max-width: initial;
 }
 

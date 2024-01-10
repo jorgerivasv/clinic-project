@@ -1,4 +1,7 @@
-import handleNavClick, { searchPage } from "./acc/functions.js";
+import handleNavClick, {
+  navStickyHandler,
+  searchPage,
+} from "./acc/functions.js";
 
 const d = document;
 
@@ -19,4 +22,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
 
   //Init nav handler
   handleNavClick("navbar-burger-btn", "navbarClinic", "navbar-item");
+
+  //Init sticky nav handler
+  navStickyHandler("navbar-complete");
 });
