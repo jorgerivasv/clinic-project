@@ -466,3 +466,7 @@ a.button.is-primary:hover iconify-icon[icon="ic:baseline-whatsapp"],
 a.button.is-primary:hover iconify-icon[icon="foundation:telephone"] {
   color: var(--white) !important;
 }
+
+.navbar-link:not(.is-arrowless)::after {
+  border-color: var(--primary) !important;
+}
