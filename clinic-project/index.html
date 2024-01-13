@@ -47,9 +47,21 @@
   <link rel="stylesheet" href="./templates/aboutus.css">
   <link rel="stylesheet" href="./templates/contact.css">
   <!--External style imports-->
-  <link rel="stylesheet" preload href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <link rel="stylesheet" preload href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
-  <link rel="stylesheet" preload href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'"
+    href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  </noscript>
+  <link rel="stylesheet" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'"
+    href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+  </noscript>
+  <link rel="stylesheet" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  </noscript>
   <!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.helper.ie8.js"></script><![endif]-->
 
   <!--Imported fonts-->
@@ -62,7 +74,7 @@
 
 
   <!--Init Gmaps-->
-  <script>function initMap() {
+  <script async>function initMap() {
       var location = { lat: -33.44258, lng: -70.6128 };
       var map = new google.maps.Map(document.getElementById("map"), {
         zoom: 17,
