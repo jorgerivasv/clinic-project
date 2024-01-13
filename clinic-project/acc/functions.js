@@ -268,7 +268,6 @@ export function handleServiceClick(className) {
 
 export function handleWorkerProfesionalInfo(className) {
   const d = document;
-  const w = window;
   const linkToClick = (href) => {
     const link = document.createElement("a");
     link.setAttribute("href", href);
@@ -280,16 +279,14 @@ export function handleWorkerProfesionalInfo(className) {
     link.remove();
   };
   const actionSelector = (elementName) => {
-    if (elementName.textContent.toLowerCase() === "martin rivas") {
-      linkToClick("https://www.instagram.com/dr.m.rivas/");
+    if (elementName.textContent.toLowerCase() === process.env.USER1) {
+      linkToClick(process.env.USER1_HREF);
     }
-    if (elementName.textContent.toLowerCase() === "nicole pacheco") {
-      linkToClick(
-        "https://www.linkedin.com/in/nicole-pacheco-herrera-008090173/"
-      );
+    if (elementName.textContent.toLowerCase() === process.env.USER2) {
+      linkToClick(process.env.USER2_HREF);
     }
-    if (elementName.textContent.toLowerCase() === "jorge rivas") {
-      linkToClick("https://www.linkedin.com/in/jorge-rivas-vesco-253070a1/");
+    if (elementName.textContent.toLowerCase() === process.env.USER3) {
+      linkToClick(process.env.USER3_HREF);
     }
   };
   const clickAction = (e) => {
@@ -308,8 +305,7 @@ export const insertGmapScript = () => {
   var script = document.createElement("script");
   script.async = true;
   script.defer = true;
-  script.src =
-    "https://maps.googleapis.com/maps/api/js?key=AIzaSyAYvSJ40lctzBAuaDr39ZbpvJeGPd5L0Wc&callback=initMap";
+  script.src = `${process.env.GMAP_HREF}`;
 
   // Añadir el script al final del body
   document.body.appendChild(script);
