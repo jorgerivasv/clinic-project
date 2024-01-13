@@ -301,11 +301,18 @@ export function handleWorkerProfesionalInfo(className) {
   d.addEventListener("click", (e) => clickAction(e));
 }
 
-export const insertGmapScript = () => {
+export const insertGmapScript = async () => {
+  const requestUrl = await fetch("/api/gmaps-url", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+  const response = await requestUrl.json();
   var script = document.createElement("script");
   script.async = true;
   script.defer = true;
-  script.src = `${process.env.GMAP_HREF}`;
+  script.src = response.href;
 
   // Añadir el script al final del body
   document.body.appendChild(script);

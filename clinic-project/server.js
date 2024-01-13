@@ -51,6 +51,13 @@ const server = http.createServer((req, res) => {
     return;
   }
 
+  //Send GMAPS URL
+  if (req.url === "/api/gmaps-url" && req.method === "GET") {
+    res.writeHead(200, { "Content-Type": "application/json" });
+    res.end(JSON.stringify({ href: `${process.env.GMAP_HREF}` }));
+    return;
+  }
+
   // Obtain routes
   let filePath = path.join(__dirname, req.url === "/" ? "index.html" : req.url);
   let mainPath = path.join(__dirname, "/index.html");
