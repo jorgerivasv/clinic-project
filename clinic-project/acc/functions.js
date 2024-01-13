@@ -279,14 +279,16 @@ export function handleWorkerProfesionalInfo(className) {
     link.remove();
   };
   const actionSelector = (elementName) => {
-    if (elementName.textContent.toLowerCase() === process.env.USER1) {
-      linkToClick(process.env.USER1_HREF);
+    if (elementName.textContent.toLowerCase() === "martin rivas") {
+      linkToClick("https://www.instagram.com/dr.m.rivas/");
     }
-    if (elementName.textContent.toLowerCase() === process.env.USER2) {
-      linkToClick(process.env.USER2_HREF);
+    if (elementName.textContent.toLowerCase() === "nicole pacheco") {
+      linkToClick(
+        "https://www.linkedin.com/in/nicole-pacheco-herrera-008090173/"
+      );
     }
-    if (elementName.textContent.toLowerCase() === process.env.USER3) {
-      linkToClick(process.env.USER3_HREF);
+    if (elementName.textContent.toLowerCase() === "jorge rivas") {
+      linkToClick("https://www.linkedin.com/in/jorge-rivas-vesco-253070a1/");
     }
   };
   const clickAction = (e) => {
@@ -297,6 +299,7 @@ export function handleWorkerProfesionalInfo(className) {
         break;
       }
     }
+    2;
   };
   d.addEventListener("click", (e) => clickAction(e));
 }
