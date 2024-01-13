@@ -1,10 +1,13 @@
 global.Headers = require("node-fetch").Headers;
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config();
+}
 
 const http = require("http");
 const fs = require("fs");
 const path = require("path");
 const { Resend } = require("resend");
-const resend = new Resend("re_MhXfpbRY_Jijc959gtsTUKRMkhYsNXGhf");
+const resend = new Resend(process.env.RESEND_TOKEN);
 
 const server = http.createServer((req, res) => {
   //Send email endpoint
@@ -26,7 +29,7 @@ const server = http.createServer((req, res) => {
       ) {
         resend.emails
           .send({
-            from: "Biodentric <onboarding@resend.dev>",
+            from: `Biodentric <${process.env.RESEND_FROM_MAIL}>`,
             to: ["martinrivasvesco@gmail.com"],
             subject: `Contacto de parte del cliente ${emailData.name}`,
             html: `<div><p>El cliente que se contacta tiene por nombre: 
@@ -34,15 +37,15 @@ const server = http.createServer((req, res) => {
           })
           .then(() => {
             res.writeHead(200, { "Content-Type": "application/json" });
-            res.end(JSON.stringify({ message: "Email enviado con éxito" }));
+            res.end(JSON.stringify({ message: "Mail sent successfully" }));
           })
           .catch((error) => {
             res.writeHead(500, { "Content-Type": "application/json" });
-            res.end(JSON.stringify({ message: "Error al enviar el email" }));
+            res.end(JSON.stringify({ message: "Error sending mail" }));
           });
       } else {
         res.writeHead(400, { "Content-Type": "application/json" });
-        res.end(JSON.stringify({ message: "Error al enviar el email" }));
+        res.end(JSON.stringify({ message: "Error sending mail" }));
       }
     });
     return;
