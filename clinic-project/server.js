@@ -42,7 +42,10 @@ const server = http.createServer((req, res) => {
           .catch((error) => {
             res.writeHead(500, { "Content-Type": "application/json" });
             res.end(
-              JSON.stringify({ message: "Error sending mail", error: error })
+              JSON.stringify({
+                message: "Error sending mail",
+                error: process.env.RESEND_TOKEN,
+              })
             );
           });
       } else {
