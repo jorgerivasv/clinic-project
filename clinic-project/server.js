@@ -27,11 +27,10 @@ const server = http.createServer((req, res) => {
         emailData.description !== null &&
         emailData.description !== ""
       ) {
-        //martinrivasvesco@gmail.com
         resend.emails
           .send({
             from: `Biodentric <onboarding@resend.com>`,
-            to: ["estebangabrielgarciasanchez@gmail.com"],
+            to: ["martinrivasvesco@gmail.com"],
             subject: `Contacto de parte del cliente ${emailData.name}`,
             html: `<div><p>El cliente que se contacta tiene por nombre: 
           ${emailData.name}</p>Nro. de teléfono: ${emailData.phone}<p></p><p>Texto de consulta: ${emailData.description}</p></div>`,
