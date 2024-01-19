@@ -28,3 +28,15 @@ a.button.is-primary iconify-icon[icon="ic:baseline-whatsapp"],
 a.button.is-primary iconify-icon[icon="foundation:telephone"] {
   color: var(--btn-text-color) !important;
 }
+
+.send-btn-container {
+  flex-direction: column;
+}
+#send_btn {
+  margin-bottom: 0.5rem;
+}
+#send_message,
+#send_error_message {
+  text-align: start;
+  width: 100%;
+}
