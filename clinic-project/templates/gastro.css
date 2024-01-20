@@ -1,5 +1,5 @@
 .accordion > .accordion-body > .accordion-content {
-  height: 0;
+  max-height: 0;
   overflow: hidden;
   transition: 0.5;
 }
@@ -10,7 +10,8 @@
 }
 
 .accordion.is-active > .accordion-body > .accordion-content {
-  height: 150px;
+  transition: 0.5;
+  max-height: 500px;
   padding-top: 2rem;
 }
 
