@@ -12,7 +12,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
   page("/", () => {
     searchPage("/templates/home.html");
   });
-  page("/dental", () => searchPage("/templates/dental.html"));
+  page("/clinica-dental", () => searchPage("/templates/clinica-dental.html"));
   page("/lab-dental", () => searchPage("/templates/lab-dental.html"));
   page("/gastro", () => searchPage("/templates/gastro.html"));
   page("/about-us", () => searchPage("/templates/aboutus.html"));

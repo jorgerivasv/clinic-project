@@ -1,6 +1,7 @@
 import tns from "./tiny-slider.js";
 import bulmaAccordion from "./bulmaAccordion.js";
 import validateForm from "./validateForm.js";
+import serviceCarousel from "./serviceCarousel.js";
 
 const w = window;
 const d = document;
@@ -58,7 +59,7 @@ export function navStickyHandler(navbarId) {
 
 export function tabHandler() {
   //  Obtain all tab and content
-  const tabs = document.querySelectorAll(".tabs li");
+  const tabs = document.querySelectorAll(".carousel-tab-item");
   const tabContents = document.querySelectorAll(".tabs-content > div");
 
   // Add event to all tab
@@ -191,9 +192,10 @@ export function searchPage(link) {
         //Init service handler
         handleServiceClick(".card-services");
       }
-      if (link === "/templates/dental.html") {
+      if (link === "/templates/clinica-dental.html") {
         tabHandler();
         //Init carousel
+        serviceCarousel();
         tns({
           mode: "carousel", // or 'gallery'
           mouseDrag: true,
@@ -249,7 +251,7 @@ export function handleServiceClick(className) {
           link.remove();
         };
         if ($elementName.textContent.toLowerCase() === "clínica dental") {
-          linkToClick("/dental");
+          linkToClick("/clinica-dental");
         } else if (
           $elementName.textContent.toLowerCase() === "laboratorio dental"
         ) {

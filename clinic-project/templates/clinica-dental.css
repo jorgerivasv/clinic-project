@@ -114,3 +114,7 @@ div.dental-card-after:hover > img {
 .tns-item {
   height: 100%;
 }
+
+.btn-specialities-tabs-forward {
+  position: absolute;
+}
