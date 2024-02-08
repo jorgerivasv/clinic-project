@@ -181,6 +181,7 @@ export function searchPage(link) {
       }
       if (link === "/templates/gastro.html") {
         tabHandler();
+        serviceCarousel();
         bulmaAccordion().attach();
       }
       if (link === "/templates/contact.html") {

@@ -105,6 +105,12 @@ a.navbar-item {
   padding: 0 1rem;
 }
 
+@media all and (max-width: 480px) {
+  a.navbar-item {
+    padding: 0.5rem 1rem;
+  }
+}
+
 .navbar-start > a.navbar-item:hover {
   color: var(--white);
   background-color: initial;
@@ -469,4 +475,50 @@ a.button.is-primary:hover iconify-icon[icon="foundation:telephone"] {
 
 .navbar-link:not(.is-arrowless)::after {
   border-color: var(--primary) !important;
+}
+
+/*Service container*/
+
+.carousel-tab-container {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.carousel-tab-slide {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* para alinear horizontalmente los elementos */
+  transition: transform 0.5s ease-in-out; /* animación suave para el deslizamiento */
+}
+
+.carousel-tab-item {
+  min-width: auto; /* cada elemento debe tener el ancho del contenedor para llenarlo completamente */
+  box-sizing: border-box;
+  /* Añadir más estilos según sea necesario */
+  margin: 0 0.5rem;
+  z-index: 50;
+}
+
+#tab-carousel-next-btn,
+#tab-carousel-prev-btn {
+  color: var(--primary);
+  background-color: var(--black);
+  border: 1px solid var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1rem;
+  width: fit-content;
+  height: fit-content;
+  z-index: 50;
+  position: absolute;
+  top: 60px;
+  right: 0;
+}
+
+#tab-carousel-prev-btn {
+  left: 0;
+  right: unset;
 }
