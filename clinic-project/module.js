@@ -1,7 +1,5 @@
-import handleNavClick, {
-  navStickyHandler,
-  searchPage,
-} from "./acc/functions.js";
+import handleNavClick, { navStickyHandler } from "./acc/functions.js";
+import { searchPage } from "./acc/searchPageHandler.js";
 
 const d = document;
 

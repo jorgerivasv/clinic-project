@@ -17,7 +17,7 @@ const serviceCarousel = () => {
   const $tabOptions = document.querySelectorAll(".tab-options");
   const $tabContents = document.querySelectorAll(".tabs-content > div");
 
-  let index = isMobile ? (items.length <= 2 ? 0 : 1) : 0;
+  let index = isMobile ? (items.length <= 2 ? 0 : 1) : 1;
 
   function tabActivator(tab, tabs, tabContents) {
     // Close  and hide all
@@ -38,39 +38,25 @@ const serviceCarousel = () => {
     }
   }
 
-  //Rellenar tamaño de cada elemento
+  //Fill each element size
 
   $tabOptions.forEach(
     (option) => (option.style.width = `calc(${widthElement}px - 1rem)`)
   );
-  if (items.length >= 3) {
-    // Clona el primer y último elemento
 
-    const lastClone = items[items.length - 1].cloneNode(true);
-    slide.prepend(lastClone);
-  }
-
-  const initialPosition = () => {
-    if (isMobile) {
-      return -widthElement * 2;
-    } else {
-      return -widthElement;
-    }
-  };
-
-  // Ajusta la posición inicial del carrusel
+  // Adjust initial position of carousel
   slide.style.transform = `translateX(${
-    items.length <= 2 ? 0 : initialPosition()
+    items.length <= 2 ? 0 : -widthElement
   }px)`;
 
   const moveToSlide = (index) => {
     slide.style.transition = "transform 0.5s ease-in-out";
     slide.style.transform = `translateX(${
-      -widthElement * (index === 0 ? 0 : isMobile ? index : index + 1)
+      -widthElement * (index === 0 ? 0 : isMobile ? index : index)
     }px)`;
   };
 
-  // Botones y eventos
+  // Events and buttons
   const nextButton = document.querySelector("#tab-carousel-next-btn");
   const prevButton = document.querySelector("#tab-carousel-prev-btn");
 
@@ -80,13 +66,12 @@ const serviceCarousel = () => {
   }
 
   nextButton.addEventListener("click", () => {
-    console.log("initial index", index, itemsLenght);
     if (index < itemsLenght) {
       index++;
     } else {
       index = 0;
     }
-    console.log(index, items[index], $tabOptions, $tabContents);
+
     if (isMobile) {
       tabActivator(items[index], $tabOptions, $tabContents);
     }
@@ -108,7 +93,7 @@ const serviceCarousel = () => {
     moveToSlide(index);
   });
 
-  // Manejar el redimensionamiento de la ventana
+  // Handle rezizing
   window.addEventListener("resize", () => {
     width = widthElement;
     moveToSlide(index);
