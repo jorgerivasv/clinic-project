@@ -522,3 +522,9 @@ a.button.is-primary:hover iconify-icon[icon="foundation:telephone"] {
   left: 0;
   right: unset;
 }
+
+@media all and (min-width: 480px) {
+  .display-none-desktop {
+    display: none;
+  }
+}

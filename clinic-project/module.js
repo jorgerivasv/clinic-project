@@ -11,7 +11,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
     searchPage("/templates/home.html");
   });
   page("/clinica-dental", () => searchPage("/templates/clinica-dental.html"));
-  page("/lab-dental", () => searchPage("/templates/lab-dental.html"));
+  page("/laboratorio-dental", () => searchPage("/templates/lab-dental.html"));
   page("/gastro", () => searchPage("/templates/gastro.html"));
   page("/about-us", () => searchPage("/templates/aboutus.html"));
   page("/contact", () => searchPage("/templates/contact.html"));
