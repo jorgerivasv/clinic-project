@@ -263,17 +263,18 @@ div.card-content {
     display: none;
   }
 
-  .card-workers:hover {
+  .box-workers {
+    bottom: -9%;
+    left: -9%;
+  }
+
+  .logo-workers {
+    transform: translate(0, 0);
+    bottom: 10px;
+    right: 5px;
+  }
+
+  /*  .card-workers {
     transform: none;
-  }
-
-  .card-workers:hover .box-workers {
-    display: none;
-  }
-
-  .card-workers:hover .logo-workers {
-    right: 50%;
-    bottom: 20%;
-    transform: translate(50%, 50%);
-  }
+  } */
 }
