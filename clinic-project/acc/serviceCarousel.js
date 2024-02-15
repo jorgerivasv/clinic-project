@@ -17,7 +17,7 @@ const serviceCarousel = () => {
   const $tabOptions = document.querySelectorAll(".tab-options");
   const $tabContents = document.querySelectorAll(".tabs-content > div");
 
-  let index = isMobile ? (items.length <= 2 ? 0 : 1) : 1;
+  let index = isMobile ? (items.length <= 2 ? 0 : 1) : 0;
 
   function tabActivator(tab, tabs, tabContents) {
     // Close  and hide all
@@ -45,8 +45,9 @@ const serviceCarousel = () => {
   );
 
   // Adjust initial position of carousel
+
   slide.style.transform = `translateX(${
-    items.length <= 2 ? 0 : -widthElement
+    isMobile ? (items.length <= 2 ? 0 : -widthElement) : 0
   }px)`;
 
   const moveToSlide = (index) => {

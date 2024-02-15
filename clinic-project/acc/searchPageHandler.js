@@ -69,6 +69,7 @@ export function searchPage(link) {
       }
       if (link === "/templates/lab-dental.html") {
         tabHandler();
+        serviceCarousel();
         tns({
           mode: "carousel", // or 'gallery'
           mouseDrag: true,

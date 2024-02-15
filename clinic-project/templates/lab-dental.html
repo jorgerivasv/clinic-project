@@ -32,58 +32,65 @@
       <div class="dental-tab">
         <h1 class="is-size-2 has-text-white has-text-centered pb-6">Listado de servicios</h1>
         <div class="pb-6">
-          <!--Tab de especialidades-->
-          <div class="tabs is-toggle is-fullwidth is-large">
-            <ul>
-              <li class="is-active" data-tab="tab-1">
+          <!--Specialities tab-->
+          <div class="carousel-tab-container is-relative">
+            <ul class="carousel-tab-slide">
+              <li class="carousel-tab-item" data-tab="tab-1">
                 <div class="tab-options">
                   <div class="service-icon service-six-img">
                     <img src="/public/lab-dental/tab-1.png" width="100" height="100" class="img-responsive"
                       alt="dental-icon">
                   </div>
-                  <h3>Digitalización</h3>
+                  <h2>Digitalización</h2>
                 </div>
               </li>
-              <li data-tab="tab-2">
+              <li class="carousel-tab-item is-active" data-tab="tab-2">
                 <div class="tab-options">
                   <div class="service-icon service-six-img">
-                    <img src="/public/lab-dental/tab-2.png" width="100" height="100" class="img-responsive" alt="">
+                    <img src="/public/lab-dental/tab-2.png" width="100" height="100" class="img-responsive"
+                      alt="digital-wax-up-image">
                   </div>
-                  <h3>Digital wax up
-                  </h3>
+                  <h2>Digital wax up</h2>
                 </div>
               </li>
-              <li data-tab="tab-3">
+              <li class="carousel-tab-item" data-tab="tab-3">
                 <div class="tab-options">
                   <div class="service-icon service-six-img">
-                    <img src="/public/lab-dental/tab-3.png" width="100" height="100" class="img-responsive" alt="">
+                    <img src="/public/lab-dental/tab-3.png" width="100" height="100" class="img-responsive"
+                      alt="3d-print-image">
                   </div>
-                  <h3>Impresión 3D</h3>
+                  <h2>Impresión 3D</h2>
                 </div>
               </li>
-              <li data-tab="tab-4">
+              <li class="carousel-tab-item" data-tab="tab-4">
                 <div class="tab-options">
                   <div class="service-icon service-six-img">
-                    <img src="/public/lab-dental/tab-4.png" width="100" height="100" class="img-responsive" alt="">
+                    <img src="/public/lab-dental/tab-4.png" width="100" height="100" class="img-responsive"
+                      alt="print-restaurations">
                   </div>
-                  <h3>Restauraciones impresas</h3>
+                  <h2>Restauraciones impresas</h2>
                 </div>
               </li>
-              <li data-tab="tab-5">
+              <li class="carousel-tab-item" data-tab="tab-5">
                 <div class="tab-options">
                   <div class="service-icon service-six-img">
-                    <img src="/public/lab-dental/tab-5.png" width="100" height="100" class="img-responsive" alt="">
+                    <img src="/public/lab-dental/tab-5.png" width="100" height="100" class="img-responsive"
+                      alt="guias-qx-image">
                   </div>
-                  <h3>Guías Qx</h3>
+                  <h2>Guías Qx</h2>
                 </div>
               </li>
             </ul>
+            <a id="tab-carousel-prev-btn" class="slider-prev-btn"><iconify-icon icon="ic:round-chevron-left" width="50"
+                height="50"></iconify-icon></a>
+            <a id="tab-carousel-next-btn" class="slider-next-btn"><iconify-icon icon="ic:round-chevron-right" width="50"
+                height="50"></iconify-icon></a>
           </div>
         </div>
         <div class="tabs-content">
-          <div id="tab-1" class="active-content">
+          <div id="tab-1">
             <div class="p-2">
-              <h1 class="is-size-2 has-text-white has-text-centered pb-6">¿En qué consiste?</h1>
+              <h1 class="is-size-2 has-text-white has-text-centered pb-6">¿En qué consiste la digitalización?</h1>
               <div class="columns">
                 <div class="column">
                   <h2 class="is-size-4 is-uppercase has-text-white pb-2">Digitalización</h2>
@@ -92,14 +99,15 @@
                     restauraciones, llámese implante, incrustación, carillas, coronas, prototipos, etc.</p>
                 </div>
                 <div class="column">
-                  <div class="dental-specialities-img"><img src="/public/lab-dental/free-metal.jpg" /></div>
+                  <div class="dental-specialities-img"><img src="/public/lab-dental/free-metal.jpg" alt="free-metal" />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div id="tab-2">
+          <div id="tab-2" class="active-content">
             <div class="p-2">
-              <h1 class="is-size-2 has-text-white has-text-centered pb-6">¿En qué consiste?</h1>
+              <h1 class="is-size-2 has-text-white has-text-centered pb-6">¿En qué consiste el digital wax up?</h1>
               <div class="columns">
                 <div class="column">
                   <h2 class="is-size-4 is-uppercase has-text-white pb-2">Digital wax up</h2>
@@ -108,14 +116,15 @@
                     clínico.</p>
                 </div>
                 <div class="column">
-                  <div class="dental-specialities-img"><img src="/public/lab-dental/metal-corones.jpg" /></div>
+                  <div class="dental-specialities-img"><img src="/public/lab-dental/metal-corones.jpg"
+                      alt="metal-corones" /></div>
                 </div>
               </div>
             </div>
           </div>
           <div id="tab-3">
             <div class="p-2">
-              <h1 class="is-size-2 has-text-white has-text-centered pb-6">¿En qué consiste?</h1>
+              <h1 class="is-size-2 has-text-white has-text-centered pb-6">¿En qué consiste la impresión 3D?</h1>
               <div class="columns">
                 <div class="column">
                   <h2 class="is-size-4 is-uppercase has-text-white pb-2">Impresión 3D</h2>
@@ -124,14 +133,16 @@
                     creación de geometrías complejas.</p>
                 </div>
                 <div class="column">
-                  <div class="dental-specialities-img"><img src="/public/lab-dental/sobreimplant.avif" /></div>
+                  <div class="dental-specialities-img"><img src="/public/lab-dental/sobreimplant.avif"
+                      alt="sobreimplant" /></div>
                 </div>
               </div>
             </div>
           </div>
           <div id="tab-4">
             <div class="p-2">
-              <h1 class="is-size-2 has-text-white has-text-centered pb-6">¿En qué consiste?</h1>
+              <h1 class="is-size-2 has-text-white has-text-centered pb-6">¿En qué consisten las restauraciones impresas?
+              </h1>
               <div class="columns">
                 <div class="column">
                   <h2 class="is-size-4 is-uppercase has-text-white pb-2">Restauraciones impresas</h2>
@@ -140,14 +151,15 @@
                     restauraciones definitivas.</p>
                 </div>
                 <div class="column">
-                  <div class="dental-specialities-img"><img src="/public/lab-dental/fixed-bridge.jpg" /></div>
+                  <div class="dental-specialities-img"><img src="/public/lab-dental/fixed-bridge.jpg"
+                      alt="fixed-bridge" /></div>
                 </div>
               </div>
             </div>
           </div>
           <div id="tab-5">
             <div class="p-2">
-              <h1 class="is-size-2 has-text-white has-text-centered pb-6">¿En qué consiste?</h1>
+              <h1 class="is-size-2 has-text-white has-text-centered pb-6">¿En qué consisten las guías Qx?</h1>
               <div class="columns">
                 <div class="column">
                   <h2 class="is-size-4 is-uppercase has-text-white pb-2">Guías Qx</h2>
@@ -156,7 +168,8 @@
                     previos, de forma cuidadosa y precisa.</p>
                 </div>
                 <div class="column">
-                  <div class="dental-specialities-img"><img src="/public/lab-dental/fixed-bridge.jpg" /></div>
+                  <div class="dental-specialities-img"><img src="/public/lab-dental/qx-guide.webp" alt="qx-guide" />
+                  </div>
                 </div>
               </div>
             </div>
