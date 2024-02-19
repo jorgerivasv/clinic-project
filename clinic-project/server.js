@@ -44,7 +44,7 @@ const server = http.createServer((req, res) => {
             res.end(
               JSON.stringify({
                 message: "Error sending mail",
-                error: process.env.RESEND_TOKEN,
+                error: "error 500 ",
               })
             );
           });
