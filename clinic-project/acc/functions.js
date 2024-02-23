@@ -153,7 +153,7 @@ export function handleWorkerProfesionalInfo(className) {
 }
 
 export const insertGmapScript = async () => {
-  const requestUrl = await fetch("/api/gmaps-url", {
+  const requestUrl = await fetch("/.netlify/functions/gmaps-url", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",

@@ -48,7 +48,7 @@ export default function validateForm() {
       return;
     }
 
-    fetch("/send-email", {
+    fetch("/.netlify/functions/send-email", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
