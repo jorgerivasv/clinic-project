@@ -1,7 +1,8 @@
 // send-email.js
 const process = require("process"); // Necesario si estás usando variables de entorno
 // Asume que 'resend' es una librería que necesitas, asegúrate de incluir y configurar adecuadamente
-const resend = require("resend"); // Asegúrate de tener esta librería disponible o adaptarlo a tu solución de envío de email
+const { Resend } = require("resend"); // Asegúrate de tener esta librería disponible o adaptarlo a tu solución de envío de email
+const resend = new Resend(process.env.RESEND_TOKEN);
 
 exports.handler = async (event, context) => {
   if (event.httpMethod !== "POST") {
