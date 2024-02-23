@@ -133,6 +133,13 @@ div.card-content {
   font-weight: 700;
 }
 
+@media all and (max-width: 480px) {
+  .logo-workers {
+    max-width: 50vw;
+    max-height: 300px;
+  }
+}
+
 .logo-workers .logo-svg-workers {
   fill: white;
   width: 30px;
