@@ -101,7 +101,7 @@ export function handleServiceClick(className) {
         } else if (
           $elementName.textContent.toLowerCase() === "laboratorio dental"
         ) {
-          linkToClick("/lab-dental");
+          linkToClick("/laboratorio-dental");
         } else if (
           $elementName.textContent.toLowerCase() ===
           "laboratorio gastroenterología"
