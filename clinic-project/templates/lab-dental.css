@@ -9,6 +9,15 @@
   border-radius: 8px;
 }
 
+@media all and (max-width: 480px) {
+  #dental-lab-pictures {
+    padding: 0;
+  }
+  #dental-lab-pictures .slider-container {
+    border-radius: 0px;
+  }
+}
+
 .dental-tab {
   display: flex;
   flex-direction: column;
