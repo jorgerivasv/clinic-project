@@ -1,2 +1,38 @@
-[build]
-functions = "netlify/functions"
+  [build]
+  functions = "netlify/functions"
+
+  [[redirects]]
+  from = "/about-us"
+  to = "/"s
+  status = 301
+  force = false
+
+  [[redirects]]
+  from = "/laboratorio-dental"
+  to = "/"
+  status = 301
+  force = false
+
+  [[redirects]]
+  from = "/clinica-dental"
+  to = "/"
+  status = 301
+  force = false
+
+  [[redirects]]
+  from = "/gastro"
+  to = "/"
+  status = 301
+  force = false
+  
+  [[redirects]]
+  from = "/contact"
+  to = "/"
+  status = 301
+  force = false
+  
+  [[redirects]]
+  from = "/*"
+  to = "/templates/404.html"
+  status = 404
+ 
