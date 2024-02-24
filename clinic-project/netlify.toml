@@ -3,7 +3,7 @@
 
   [[redirects]]
   from = "/about-us"
-  to = "/"s
+  to = "/"
   status = 301
   force = false
 
