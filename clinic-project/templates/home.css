@@ -113,24 +113,33 @@ div.card-content {
   max-height: 450px;
   background: var(--white);
   overflow: hidden;
-  border: 2px solid var(--primary);
+  border: 7px solid var(--white);
+  outline: 1px solid var(--primary);
   border-radius: 8px;
   transition: all 1s ease-in-out;
   margin: 0 1rem;
   cursor: pointer;
 }
 
+.background-workers,
+.background-workers img {
+  max-height: 300px;
+  border-start-end-radius: 8px;
+  border-start-start-radius: 8px;
+  background-color: var(--black);
+}
+.background-workers img {
+  max-height: 100%;
+}
+
 .logo-workers {
-  position: absolute;
-  right: 50%;
-  bottom: 20%;
-  transform: translate(50%, 50%);
+  transform: translate(0, 0);
+  height: 150px;
   transition: all 0.6s ease-in-out;
-  border-radius: 1rem;
-  background-color: var(--light-gray);
-  border: 2px solid var(--black);
+  background-color: var(--white);
   padding: 0.5rem;
   font-weight: 700;
+  text-align: center;
 }
 
 .logo-workers .logo-svg-workers {
@@ -247,14 +256,12 @@ div.card-content {
 
 @media all and (min-width: 480px) {
   .card-workers:hover .box-workers {
-    bottom: -1px;
-    left: -1px;
+    bottom: -70px;
+    left: -40px;
   }
 
   .card-workers:hover .logo-workers {
-    transform: translate(0, 0);
-    bottom: 50px;
-    right: 50px;
+    transform: translate(none, none);
   }
 }
 
@@ -265,24 +272,18 @@ div.card-content {
     max-height: 300px;
   }
 
-  .logo-workers {
-    max-width: 50vw;
-    max-height: 300px;
-  }
-
   #custom_controlsContainer {
     display: none;
   }
 
   .box-workers {
-    bottom: -9%;
-    left: -9%;
+    bottom: -15%;
+    left: -11%;
+    padding: 5px 10px;
   }
 
-  .logo-workers {
-    transform: translate(0, 0);
-    bottom: 10px;
-    right: 5px;
+  .background-workers {
+    max-height: 190px;
   }
 
   /*  .card-workers {
