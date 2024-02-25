@@ -1,10 +1,12 @@
 import bulmaAccordion from "./acc/bulmaAccordion.js";
 import handleNavClick, {
+  insertGmapScript,
   navStickyHandler,
   tabHandler,
 } from "./acc/functions.js";
 import { searchPage } from "./acc/searchPageHandler.js";
 import serviceCarousel from "./acc/serviceCarousel.js";
+import validateForm from "./acc/validateForm.js";
 
 const d = document;
 
