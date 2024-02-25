@@ -2,25 +2,6 @@
   functions = "netlify/functions"
 
   [[redirects]]
-  from = "/about-us"
-  to = "/"
-  status = 301
-  force = false
-
-  [[redirects]]
-  from = "/laboratorio-dental"
-  to = "/"
-  status = 301
-  force = false
-
-  
-  [[redirects]]
-  from = "/contact"
-  to = "/"
-  status = 301
-  force = false
-
-  [[redirects]]
   from = "/sitemap.xml"
   to = "/sitemap.xml"
   status = 200

@@ -29,12 +29,14 @@ d.addEventListener("DOMContentLoaded", (e) => {
   //Init sticky nav handler
   navStickyHandler("navbar-complete");
 
-  console.log(window.location.pathname);
-  if (window.location.pathname.includes("gastro")) {
+  //If the page was loaded externally charge the main html of the page
+  const currentLocation = window.location.pathname;
+
+  if (currentLocation.includes("gastro")) {
     tabHandler();
     serviceCarousel();
     bulmaAccordion().attach();
-  } else if (window.localtion.pathname.includes("clinica-dental")) {
+  } else if (currentLocation.includes("clinica-dental")) {
     tabHandler();
     //Init carousel
     serviceCarousel();
@@ -71,5 +73,47 @@ d.addEventListener("DOMContentLoaded", (e) => {
         },
       },
     });
+  } else if (currentLocation.includes("laboratorio-dental")) {
+    tabHandler();
+    serviceCarousel();
+    tns({
+      mode: "carousel", // or 'gallery'
+      mouseDrag: true,
+      navPosition: "bottom",
+      autoplay: true,
+      autoplayButtonOutput: false,
+      loop: true,
+      gutter: 0,
+      controlsContainer: "#custom_controlsContainer",
+      nextButton: "#prev",
+      nextButton: "#next", // String selector
+      arrowKeys: true, // keyboard support
+      lazyload: false,
+      lazyloadSelector: ".tns-lazy",
+      speed: 700,
+      startIndex: 0,
+      responsive: {
+        0: {
+          items: 1,
+          edgePadding: 30,
+          nav: false,
+        },
+        768: {
+          items: 4,
+          edgePadding: 0,
+        },
+        1024: {
+          items: 4,
+          edgePadding: 0,
+        },
+      },
+    });
+  } else if (currentLocation.includes("about-us")) {
+    //Init service handler
+    handleServiceClick(".card-services");
+  } else if (currentLocation.includes("contact")) {
+    //Init gmaps
+    insertGmapScript();
+    validateForm();
   }
 });
