@@ -18,7 +18,7 @@ exports.handler = async (event, context) => {
 
   if (emailData.name && emailData.phone && emailData.description) {
     try {
-      await resend.emails.send({
+      const { data, error } = await resend.emails.send({
         from: `Biodentric <onboarding@resend.com>`,
         to: ["martinrivasvesco@gmail.com"],
         subject: `Contacto de parte del cliente ${emailData.name}`,
@@ -26,13 +26,20 @@ exports.handler = async (event, context) => {
         ${emailData.name}</p>Nro. de teléfono: ${emailData.phone}<p></p><p>Texto de consulta: ${emailData.description}</p></div>`,
       });
 
-      return {
-        statusCode: 200,
-        body: JSON.stringify({
-          message: "Mail sent successfully",
-          origin: origin,
-        }),
-      };
+      if (error) {
+        return {
+          statusCode: 400,
+          body: JSON.stringify({ message: "Error sending mail", error }),
+        };
+      } else {
+        return {
+          statusCode: 200,
+          body: JSON.stringify({
+            message: "Mail sent successfully",
+            origin: origin,
+          }),
+        };
+      }
     } catch (error) {
       return {
         statusCode: 500,
