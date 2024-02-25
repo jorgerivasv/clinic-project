@@ -97,7 +97,14 @@
 
 .carrousel-dental-img {
   width: 100%;
-  height: 320px;
+  height: 250px;
+}
+
+@media screen and (width <= 780px) {
+  .carrousel-dental-img {
+    width: 100%;
+    height: 180px;
+  }
 }
 
 .carrousel-dental-img > div {

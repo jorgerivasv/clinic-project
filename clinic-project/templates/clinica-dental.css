@@ -120,8 +120,12 @@ ul.tns-slider {
   height: 100%;
 }
 
-.tns-item > .background-workers {
-  border: none;
+.carrousel-dental-img > .background-workers {
+  border-radius: 0px;
+}
+
+.carrousel-dental-img > .background-workers > img {
+  border-radius: 0px;
 }
 
 .btn-specialities-tabs-forward {
