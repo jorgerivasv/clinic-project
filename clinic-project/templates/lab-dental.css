@@ -16,6 +16,9 @@
   #dental-lab-pictures .slider-container {
     border-radius: 0px;
   }
+  .background-workers img {
+    border-radius: 0px;
+  }
 }
 
 .dental-tab {
