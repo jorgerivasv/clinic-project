@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!--Permission policy-->
+  <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+  <!--Content type-->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <!--Responsive-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--Meta title-->
+  <title>Biodentric</title>
+  <meta name="title" content="Biodentric">
+  <!--Meta description page to SEO-->
+  <meta name="description"
+    content="La clínica Biodentric es un centro médico especializado en ofrecer servicios de calidad en el cuidado de la salud bucal y gastrointestinal">
+  <!--Meta keywords to SEO-->
+  <meta name="keywords"
+    content="odontología, gastroenterología, gastro, dientes, cuidado, bucal, boca, estómago, intestinos, caries">
+  <!--Meta Open Graph-->
+  <meta property="og:title" content="Biodentric" />
+  <meta property="og:description" content="Todos podemos sonreir" />
+  <meta property="og:image" content="https://biodentric.cl/public/dental/dental-bg.avif" />
+  <meta property="og:url" content="https://biodentric.cl" />
+  <meta property="og:type" content="website" />
+  <!--Meta Twitter Card-->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Biodentric">
+  <meta name="twitter:description" content="Todos podemos sonreir">
+  <meta name="twitter:image" content="https://biodentric.cl/public/dental/dental-bg.avif">
+  <!--Other meta config to robots-->
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="Spanish">
+  <meta name="revisit-after" content="1 days">
+  <!--Favicon items-->
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/logo/favicon-16x16.png"
+    media="(prefers-color-scheme: light)">
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/logo/favicon-16x16-white.png"
+    media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/logo/favicon-32x32.png"
+    media="(prefers-color-scheme: light)">
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/logo/favicon-32x32-white.png"
+    media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="192x192" href="/public/logo/android-chrome-192x192.png"
+    media="(prefers-color-scheme: light)">
+  <link rel="icon" type="image/png" sizes="192x192" href="/public/logo/android-chrome-192x192-white.png"
+    media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="512x512" href="/public/logo/android-chrome-512x512.png"
+    media="(prefers-color-scheme: light)">
+  <link rel="icon" type="image/png" sizes="512x512" href="/public/logo/android-chrome-512x512-white.png"
+    media="(prefers-color-scheme: dark)">
+
+  <!-- For iOS Safari -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/public/logo/apple-touch-icon.png"
+    media="(prefers-color-scheme: light)">
+  <link rel="apple-touch-icon" sizes="180x180" href="/public/logo/apple-touch-icon-white.png"
+    media="(prefers-color-scheme: dark)">
+
+  <!-- For Windows 8 and Windows 10 -->
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/public/logo/transparent-black-logo-small.png">
+
+  <!-- Manifest for Progressive Web Apps -->
+  <link rel="manifest" href="/public/logo/site.webmanifest">
+
+  <!--Main style imports-->
+  <link rel="stylesheet" href="./reset.css">
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./templates/home.css">
+  <link rel="stylesheet" href="./templates/clinica-dental.css">
+  <link rel="stylesheet" href="./templates/lab-dental.css">
+  <link rel="stylesheet" href="./templates/gastro.css">
+  <link rel="stylesheet" href="./templates/aboutus.css">
+  <link rel="stylesheet" href="./templates/contact.css">
+  <!--External style imports-->
+  <link rel="stylesheet" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'"
+    href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  </noscript>
+  <link rel="stylesheet" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'"
+    href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+  </noscript>
+  <link rel="stylesheet" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  </noscript>
+  <!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.helper.ie8.js"></script><![endif]-->
+
+  <!--Imported fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'"
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Rajdhani:wght@300;400;500;600;700&display=swap" />
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Rajdhani:wght@300;400;500;600;700&display=swap">
+  </noscript>
+  <link rel="stylesheet" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'"
+    href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <noscript>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  </noscript>
+
+  <!--Init Gmaps-->
+  <script async defer>function initMap() {
+      var location = { lat: -33.44258, lng: -70.6128 };
+      var map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 17,
+        center: location,
+        styles: [
+          {
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#212121"
+              }
+            ]
+          },
+          {
+            "elementType": "labels.icon",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#757575"
+              }
+            ]
+          },
+          {
+            "elementType": "labels.text.stroke",
+            "stylers": [
+              {
+                "color": "#212121"
+              }
+            ]
+          },
+          {
+            "featureType": "administrative",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#757575"
+              }
+            ]
+          },
+          {
+            "featureType": "administrative.country",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#9e9e9e"
+              }
+            ]
+          },
+          {
+            "featureType": "administrative.land_parcel",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "administrative.locality",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#bdbdbd"
+              }
+            ]
+          },
+          {
+            "featureType": "poi",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#757575"
+              }
+            ]
+          },
+          {
+            "featureType": "poi.park",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#181818"
+              }
+            ]
+          },
+          {
+            "featureType": "poi.park",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#616161"
+              }
+            ]
+          },
+          {
+            "featureType": "poi.park",
+            "elementType": "labels.text.stroke",
+            "stylers": [
+              {
+                "color": "#1b1b1b"
+              }
+            ]
+          },
+          {
+            "featureType": "road",
+            "elementType": "geometry.fill",
+            "stylers": [
+              {
+                "color": "#2c2c2c"
+              }
+            ]
+          },
+          {
+            "featureType": "road",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#8a8a8a"
+              }
+            ]
+          },
+          {
+            "featureType": "road.arterial",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#373737"
+              }
+            ]
+          },
+          {
+            "featureType": "road.highway",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#3c3c3c"
+              }
+            ]
+          },
+          {
+            "featureType": "road.highway.controlled_access",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#4e4e4e"
+              }
+            ]
+          },
+          {
+            "featureType": "road.local",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#616161"
+              }
+            ]
+          },
+          {
+            "featureType": "transit",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#757575"
+              }
+            ]
+          },
+          {
+            "featureType": "water",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#000000"
+              }
+            ]
+          },
+          {
+            "featureType": "water",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#3d3d3d"
+              }
+            ]
+          }
+        ]
+      });
+      new google.maps.Marker({
+        position: location,
+        map: map,
+      });
+    }</script>
+</head>
+
+<body>
+  <!--Global navigation-->
+  <nav class="navbar pt-3" role="navigation" aria-label="main navigation" id="navbar-complete">
+    <div class="container  navbar-container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+          <img src="/public/logo/transparent-white-logo.webp" width="200" height="53" alt="transparent-white-logo">
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarClinic"
+          id="navbar-burger-btn">
+          <span class="burger-span" aria-hidden="true"></span>
+          <span class="burger-span" aria-hidden="true"></span>
+          <span class="burger-span" aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarClinic" class="navbar-menu">
+        <div class="navbar-start ml-auto">
+          <a class="navbar-item" href="/about-us">Nosotros</a>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <p class="navbar-link dropdown-link has-text-white">
+              Servicios
+            </p>
+            <div class="navbar-dropdown has-background-black is-boxed">
+              <a class="navbar-item " href="/clinica-dental">Clínica Dental</a>
+              <a class="navbar-item " href="/laboratorio-dental">Laboratorio dental</a>
+              <a class="navbar-item " href="/gastro">Laboratorio Gastroenterología</a>
+            </div>
+          </div>
+          <a class="navbar-item" href="/contact">Contáctanos</a>
+        </div>
+
+        <div class="custom-card-footer">
+          <a href="https://www.instagram.com/clinica_biodentric/" aria-label="See our latest post at instagram"
+            target="_blank" rel="noopener noreferrer" class="social-link1">
+            <iconify-icon icon="mdi:instagram" style="color: white;" width="30" height="30"></iconify-icon>
+          </a>
+          <a href="https://wa.me/56979635540?text=%C2%A1Hola%20Biodentric!%20Estoy%20interesado/a%20en%20conocer%20m%C3%A1s%20sobre%20sus%20servicios%20odontol%C3%B3gicos%20y%20c%C3%B3mo%20pueden%20ayudarme%20a%20sonre%C3%ADr%20con%20confianza.%20%C2%BFPodr%C3%ADan%20proporcionarme%20m%C3%A1s%20informaci%C3%B3n?%20%C2%A1Gracias!"
+            target="_blank" rel="noopener noreferrer" class="social-link3" aria-label="Contact us by whatsapp">
+            <iconify-icon icon="ic:baseline-whatsapp" style="color: white;" width="30" height="30"></iconify-icon>
+          </a>
+        </div>
+      </div>
+
+
+  </nav>
+
+  <!--Here main page content handled by Page.js-->
+  <main id="content">
+    <article id="dental-header" class="is-flex">
+      <div id="dental-bg"><img src="./public/gastro/main-bg.jpeg"></div>
+      <div
+        class="container is-relative is-flex is-flex-grow-1 is-align-items-flex-end is-justify-content-space-between py-6">
+        <div class="columns">
+          <div
+            class="column is-size-8 is-flex is-flex-direction-column is-align-items-flex-start is-justify-content-flex-start">
+            <h1 class="has-text-white is-size-3-mobile display-none-desktop p-5">Laboratorio Gastroenterología</h1>
+            <h1 class="has-text-white is-size-3 has-text-weight-bold is-size-6-mobile px-5 pb-5">Todos podemos sentirnos
+              cómodos en nuestro
+              día
+              a día.</h1>
+            <a href="/contact" class="button is-primary mx-5">Contáctanos</a>
+          </div>
+          <div class="column is-size-4 "></div>
+        </div>
+      </div>
+    </article>
+    <article class="black-bg z-index">
+      <div class="container" data-aos="zoom-in-right" data-aos-duration="1000">
+
+        <div class="dental-tab">
+          <h1 class="is-size-2 has-text-white has-text-centered pb-6">Listado de exámenes</h1>
+          <div class="pb-6">
+            <div class="container carousel-container">
+              <div class="w-100">
+                <div class="pb-6">
+                  <!--Tab de especialidades-->
+                  <div class="carousel-tab-container is-relative">
+                    <ul class="carousel-tab-slide">
+                      <li class="carousel-tab-item is-active" data-tab="tab-1">
+                        <div class="tab-options">
+                          <div class="service-icon service-six-img">
+                            <img src="./public/gastro/phmetric.png" width="100" height="100" class="img-responsive"
+                              alt="dental-icon">
+                          </div>
+                          <h2>PHmetría 24hrs</h2>
+                        </div>
+                      </li>
+                      <li class="carousel-tab-item" data-tab="tab-2">
+                        <div class="tab-options">
+                          <div class="service-icon service-six-img">
+                            <img src="./public/gastro/test-air.png" width="100" height="100" class="img-responsive"
+                              alt="">
+                          </div>
+                          <h3 style="overflow-wrap: break-word; max-width:300px; text-wrap:wrap; text-align: center;">
+                            Test
+                            de
+                            aire espirado
+                          </h3>
+                          <h3 style="overflow-wrap: break-word; max-width:300px; text-wrap:wrap; text-align: center;">
+                            (lactulosa, lactosa y
+                            fructosa)</h3>
+                        </div>
+                      </li>
+                    </ul>
+                    <a id="tab-carousel-prev-btn" class="slider-prev-btn"><iconify-icon icon="ic:round-chevron-left"
+                        width="50" height="50"></iconify-icon></a>
+                    <a id="tab-carousel-next-btn" class="slider-next-btn"><iconify-icon icon="ic:round-chevron-right"
+                        width="50" height="50"></iconify-icon></a>
+                  </div>
+                </div>
+                <div class="tabs-content">
+                  <div id="tab-1" class="active-content">
+                    <div class="p-2">
+                      <h1 class="is-size-2 has-text-white has-text-centered pb-6">¿En qué consiste?</h1>
+                      <div class="columns">
+                        <div class="column">
+                          <p class="is-size-4 is-uppercase has-text-white pb-2">PHmetría 24hrs</p>
+                          <p class="is-size-6 has-text-white">Es un procedimiento en el cual se diagnóstica el Reflujo
+                            Gastroesofágico mediante una sonda que se introduce por la
+                            nariz y llega al esófago. Este examen permite identificar cuándo y durante cuánto tiempo de
+                            24
+                            horas
+                            el ácido estomacal
+                            se encuentra en esta zona.</p>
+                        </div>
+                        <div class="column">
+                          <div class="dental-specialities-img"><img src="./public/gastro/phmetric.jpg" /></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="tab-2">
+                    <div class="p-2">
+                      <h1 class="is-size-2 has-text-white has-text-centered pb-6">¿En qué consiste?</h1>
+                      <div class="columns">
+                        <div class="column">
+                          <p class="is-size-4 is-uppercase has-text-white pb-2">Test de aire espirado (lactulosa,
+                            lactosa
+                            y
+                            fructosa)</p>
+                          <p class="is-size-6 has-text-white">Es un procedimiento no invasivo el cual permite
+                            diagnosticar
+                            sobrecrecimiento bacteriano o malabsorción de lactosa y
+                            fructosa. El examen de aire espirado consiste en la medición seriada del hidrógeno eliminado
+                            a
+                            través de su respiración.
+                            La prueba dura 3 horas desde el comienzo de su medición.
+                          </p>
+                        </div>
+                        <div class="column">
+                          <div class="dental-specialities-img"><img src="./public/gastro/test-gastro.png" /></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+    </article>
+    <article class="black-bg z-index">
+      <div class="container px-3">
+        <div class="is-flex is-flex-direction-column is-justify-content-center is-align-items-center w-100">
+          <h1 class="is-size-2 has-text-white has-text-centered pb-6" data-aos="zoom-in" data-aos-duration="1000">
+            Preguntas Frecuentes</h1>
+          <div class="is-flex is-align-items-center is-justify-content-flex-start w-100">
+            <div class="accordions">
+              <div class="accordion is-active" data-aos="fade-right" data-aos-duration="1000">
+                <div class="accordion-header toggle is-flex is-align-items-flex-start is-justify-content-space-between">
+                  <p class="is-size-4 has-text-weight-semibold">¿Debo realizar algún cambio en mi vida diaria durante
+                    las
+                    24 horas del examen de
+                    phmetría?</p>
+                  <iconify-icon icon="solar:alt-arrow-down-line-duotone" style="color: #00d1b2;" width="40"
+                    height="40"></iconify-icon>
+                </div>
+                <div class="accordion-body">
+                  <div class="accordion-content is-size-5">
+                    Antes del examen es importante la suspensión de algún IBP (Omeprazol, lansoprazol, esomeprazol) 10
+                    días antes del
+                    examen. Durante el mismo día del examen, debe hacer una vida similar a la normal, sin hacer dieta
+                    especial, ni cambiar
+                    sus hábitos rutinarios.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion" data-aos="fade-left" data-aos-duration="1000">
+                <div class="accordion-header toggle is-flex is-align-items-flex-start is-justify-content-space-between">
+                  <p class="is-size-4 has-text-weight-semibold">¿Qué es el reflujo gastroesofágico?</p>
+                  <iconify-icon icon="solar:alt-arrow-down-line-duotone" style="color: #00d1b2;" width="40"
+                    height="40"></iconify-icon>
+                </div>
+                <div class="accordion-body">
+                  <div class="accordion-content is-size-5">
+                    La enfermedad por reflujo gastroesofágico (ERGE) es una afección en la cual los contenidos
+                    estomacales
+                    se devuelven
+                    desde el estómago hacia el esófago.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion" data-aos="fade-right" data-aos-duration="1000">
+                <div class="accordion-header toggle is-flex is-align-items-flex-start is-justify-content-space-between">
+                  <p class="is-size-4 has-text-weight-semibold">¿Qué recomendaciones hay para el reflujo
+                    gastroesofágico?
+                  </p>
+                  <iconify-icon icon="solar:alt-arrow-down-line-duotone" style="color: #00d1b2;" width="40"
+                    height="40"></iconify-icon>
+                </div>
+                <div class="accordion-body">
+                  <div class="accordion-content is-size-5">
+                    Ir a un gastroenterólogo para que te pueda diagnosticar e indicar un tratamiento adecuado para ti.
+                    Además, puedes seguir
+                    otros consejos como comer despacio y masticar bien, evitar alimentos cítricos, no acostarse
+                    inmediatamente después de
+                    comer, evitar el sobrepeso, entre otros.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion" data-aos="fade-left" data-aos-duration="1000">
+                <div class="accordion-header toggle is-flex is-align-items-flex-start is-justify-content-space-between">
+                  <p class="is-size-4 has-text-weight-semibold">¿Qué es el sobrecrecimiento bacteriano?</p>
+                  <iconify-icon icon="solar:alt-arrow-down-line-duotone" style="color: #00d1b2;" width="40"
+                    height="40"></iconify-icon>
+                </div>
+                <div class="accordion-body">
+                  <div class="accordion-content is-size-5">
+                    El sobrecrecimiento bacteriano en el intestino delgado (SIBO) se produce cuando hay un aumento
+                    anormal
+                    de toda la
+                    población bacteriana en el intestino delgado, en particular de los tipos de bacterias que no se
+                    encuentran comúnmente en
+                    esa parte del tubo digestivo. Algunos de sus síntomas son: hinchazón, sensación de saciedad después
+                    de
+                    comer, diarrea,
+                    etc.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion" data-aos="fade-right" data-aos-duration="1000">
+                <div class="accordion-header toggle is-flex is-align-items-flex-start is-justify-content-space-between">
+                  <p class="is-size-4 has-text-weight-semibold">¿En qué consiste el examen del Test de Aire Espirado?
+                  </p>
+                  <iconify-icon icon="solar:alt-arrow-down-line-duotone" style="color: #00d1b2;" width="40"
+                    height="40"></iconify-icon>
+                </div>
+                <div class="accordion-body">
+                  <div class="accordion-content is-size-5">
+                    Es un examen que dura 3 horas desde el comienzo de su medición. Al inicio debes tomar un líquido
+                    (puede ser lactulosa,
+                    lactosa o fructosa) y luego debes soplar cada cierto tiempo en una boquilla. Esto medirá el
+                    hidrógeno
+                    y metano espirado
+                    y se podrá realizar un diagnóstico preciso sobre tus síntomas. Durante el examen, puedes permanecer
+                    tranquilo, sentado y
+                    traer tu computador o libro para leer.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion" data-aos="fade-left" data-aos-duration="1000">
+                <div class="accordion-header toggle is-flex is-align-items-flex-start is-justify-content-space-between">
+                  <p class="is-size-4 has-text-weight-semibold">¿Hay indicaciones para el test de aire?</p>
+                  <iconify-icon icon="solar:alt-arrow-down-line-duotone" style="color: #00d1b2;" width="40"
+                    height="40"></iconify-icon>
+                </div>
+                <div class="accordion-body">
+                  <div class="accordion-content is-size-5">
+                    Si, todas las indicaciones se te mandarán al momento de agendar. Debes seguir una dieta un día antes
+                    y
+                    suspender
+                    medicamentos como laxantes, antibióticos o procinéticos.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!--Global footer-->
+  <footer class="footer">
+    <div class="columns">
+      <div class="column pb-5"><a href="/">
+          <img src="/public/logo/transparent-white-logo.webp" width="200" height="53" alt="transparent-white-logo">
+        </a></div>
+      <div class="column pb-5">
+        <div class="is-flex is-align-items-center is-justify-content-flex-start pb-4">
+          <iconify-icon icon="wi:time-4" style="color: #00d1b2;" width="25" height="25"></iconify-icon>
+          <p class="is-size-6 is-size-5-desktop is-uppercase has-text-white pl-2 has-text-weight-bold">Horarios</p>
+        </div>
+        <div>
+          <p class="is-size-6 has-text-white">Lunes a Jueves de <span>9:00 a 19:00hrs</span></p>
+          <p class="is-size-6 has-text-white">Viernes y Sábados de <span>9:00 a 18:00hrs</span></p>
+        </div>
+      </div>
+      <div class="column pb-5">
+        <div class="is-flex is-align-items-center is-justify-content-flex-start pb-4">
+          <iconify-icon icon="mingcute:calendar-line" style="color: #00d1b2;" width="25" height="25"></iconify-icon>
+          <p class="is-size-6 is-size-5-desktop is-uppercase has-text-white pl-2 has-text-weight-bold">Reserva</p>
+        </div>
+        <div>
+          <div class="is-flex is-align-items-center is-justify-content-flex-start "><iconify-icon
+              icon="ic:baseline-whatsapp" style="color: #00d1b2;" width="22" height="22"></iconify-icon>
+            <p class="is-size-6  has-text-white pl-1">Whatsapp: +56 9 7963 5540
+            </p>
+          </div>
+          <div class="is-flex is-align-items-center is-justify-content-flex-start "><iconify-icon icon="ph:phone"
+              style="color: #00d1b2;" width="22" height="22"></iconify-icon>
+            <p class="is-size-6  has-text-white pl-1">Teléfono: +56 9 7963 5540</p>
+          </div>
+          <div class="is-flex is-align-items-center is-justify-content-flex-start "><iconify-icon
+              icon="material-symbols:mail-outline" style="color: #00d1b2;" width="22" height="22"></iconify-icon>
+            <p class="is-size-6  has-text-white pl-1">E-mail: martinrivasvesco@gmail.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="column pb-5">
+        <div class="is-flex is-align-items-center is-justify-content-flex-start pb-4">
+          <iconify-icon icon="mingcute:calendar-line" style="color: #00d1b2;" width="25" height="25"></iconify-icon>
+          <p class="is-size-6 is-size-5-desktop is-uppercase has-text-white pl-2 has-text-weight-bold">Dirección y redes
+          </p>
+        </div>
+        <div class="is-flex is-align-items-flex-start is-justify-content-flex-start "><iconify-icon icon="gg:pin"
+            style="color: #00d1b2;" width="22" height="22"></iconify-icon>
+          <p class="is-size-6 has-text-white pl-1 pb-5">Antonio Varas 1713, Oficina 103, Providencia,
+            Santiago, Chile</p>
+        </div>
+        <div class="custom-card-footer">
+          <a href="https://www.instagram.com/clinica_biodentric/" aria-label="See our latest post at instagram"
+            target="_blank" rel="noopener noreferrer" class="social-link1">
+            <iconify-icon icon="mdi:instagram" style="color: white;" width="30" height="30"></iconify-icon>
+          </a>
+          <a href="https://wa.me/56979635540?text=%C2%A1Hola%20Biodentric!%20Estoy%20interesado/a%20en%20conocer%20m%C3%A1s%20sobre%20sus%20servicios%20odontol%C3%B3gicos%20y%20c%C3%B3mo%20pueden%20ayudarme%20a%20sonre%C3%ADr%20con%20confianza.%20%C2%BFPodr%C3%ADan%20proporcionarme%20m%C3%A1s%20informaci%C3%B3n?%20%C2%A1Gracias!"
+            target="_blank" rel="noopener noreferrer" class="social-link3" aria-label="Contact us by whatsapp">
+            <iconify-icon icon="ic:baseline-whatsapp" style="color: white;" width="30" height="30"></iconify-icon>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--Gmap script-->
+  <script src="./acc/page.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./module.js" type="module"></script>
+
+</html>
