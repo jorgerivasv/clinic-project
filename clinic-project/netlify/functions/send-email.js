@@ -4,10 +4,10 @@ const process = require("process"); // Necesario si estás usando variables de e
 const { Resend } = require("resend"); // Asegúrate de tener esta librería disponible o adaptarlo a tu solución de envío de email
 const resend = new Resend(process.env.RESEND_TOKEN);
 
-const origin =
-  event.headers["Origin"] || event.headers["Referer"] || "Desconocido";
-
 exports.handler = async (event, context) => {
+  const origin =
+    event.headers["Origin"] || event.headers["Referer"] || "Desconocido";
+
   if (event.httpMethod !== "POST") {
     return {
       statusCode: 405,
