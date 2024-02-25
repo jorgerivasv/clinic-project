@@ -193,6 +193,10 @@ a.dropdown-link:hover {
   background-color: var(--black);
 }
 
+p.navbar-link {
+  padding: 0.5rem 1rem;
+}
+
 div.navbar-dropdown {
   border-top: none;
 }
