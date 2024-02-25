@@ -112,6 +112,10 @@ div.dental-card-after:hover > img {
   width: 100%;
 }
 
+ul.tns-slider {
+  display: flex;
+}
+
 .tns-item {
   height: 100%;
 }
