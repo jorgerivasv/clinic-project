@@ -274,6 +274,7 @@ div.navbar-item.has-dropdown:hover .navbar-link {
 @media all and (max-width: 480px) {
   #ourteam-section-mobile {
     display: block;
+    padding-bottom: 0px;
   }
   #ourteam-section {
     display: none;

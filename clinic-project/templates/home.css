@@ -286,10 +286,6 @@ div.card-content {
     max-height: 190px;
   }
 
-  article:last-child {
-    padding-bottom: 0px;
-  }
-
   /*  .card-workers {
     transform: none;
   } */
