@@ -29,9 +29,47 @@ d.addEventListener("DOMContentLoaded", (e) => {
   //Init sticky nav handler
   navStickyHandler("navbar-complete");
 
+  console.log(window.location.pathname);
   if (window.location.pathname.includes("gastro")) {
     tabHandler();
     serviceCarousel();
     bulmaAccordion().attach();
+  } else if (window.localtion.pathname.includes("clinica-dental")) {
+    tabHandler();
+    //Init carousel
+    serviceCarousel();
+    tns({
+      mode: "carousel", // or 'gallery'
+      mouseDrag: true,
+      navPosition: "bottom",
+      autoplay: true,
+      autoplayButtonOutput: false,
+      loop: true,
+      gutter: 0,
+      controlsContainer: "#custom_controlsContainer",
+      prevButton: "#prev",
+      nextButton: "#next", // String selector
+      arrowKeys: true, // keyboard support
+      lazyload: false,
+      lazyloadSelector: ".tns-lazy",
+      speed: 700,
+      startIndex: 0,
+      swipeAngle: false,
+      responsive: {
+        0: {
+          items: 1,
+          edgePadding: 30,
+          nav: true,
+        },
+        768: {
+          items: 3,
+          edgePadding: 0,
+        },
+        1024: {
+          items: 3,
+          edgePadding: 0,
+        },
+      },
+    });
   }
 });

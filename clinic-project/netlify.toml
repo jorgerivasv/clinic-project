@@ -13,11 +13,6 @@
   status = 301
   force = false
 
-  [[redirects]]
-  from = "/clinica-dental"
-  to = "/"
-  status = 301
-  force = false
   
   [[redirects]]
   from = "/contact"
