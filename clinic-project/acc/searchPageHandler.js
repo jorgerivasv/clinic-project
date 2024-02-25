@@ -108,7 +108,7 @@ export function searchPage(link) {
         serviceCarousel();
         bulmaAccordion().attach();
       }
-      if (link === "/templates/contact.html") {
+      if (link === "/templates/contacto.html") {
         //Init gmaps
         insertGmapScript();
         validateForm();
