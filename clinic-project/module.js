@@ -1,5 +1,10 @@
-import handleNavClick, { navStickyHandler } from "./acc/functions.js";
+import bulmaAccordion from "./acc/bulmaAccordion.js";
+import handleNavClick, {
+  navStickyHandler,
+  tabHandler,
+} from "./acc/functions.js";
 import { searchPage } from "./acc/searchPageHandler.js";
+import serviceCarousel from "./acc/serviceCarousel.js";
 
 const d = document;
 
@@ -23,4 +28,10 @@ d.addEventListener("DOMContentLoaded", (e) => {
 
   //Init sticky nav handler
   navStickyHandler("navbar-complete");
+
+  if (window.location.pathname.includes("gastro")) {
+    tabHandler();
+    serviceCarousel();
+    bulmaAccordion().attach();
+  }
 });
