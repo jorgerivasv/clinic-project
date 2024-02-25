@@ -120,6 +120,10 @@ ul.tns-slider {
   height: 100%;
 }
 
+.tns-item > .background-workers {
+  border: none;
+}
+
 .btn-specialities-tabs-forward {
   position: absolute;
 }
