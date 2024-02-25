@@ -19,7 +19,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
   page("/laboratorio-dental", () => searchPage("/templates/lab-dental.html"));
   page("/gastro", () => searchPage("/templates/gastro.html"));
   page("/about-us", () => searchPage("/templates/aboutus.html"));
-  page("/contact", () => searchPage("/templates/contact.html"));
+  page("/contacto", () => searchPage("/templates/contacto.html"));
   page("*", () => searchPage("/templates/404.html"));
   page();
 
@@ -111,7 +111,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
   } else if (currentLocation.includes("about-us")) {
     //Init service handler
     handleServiceClick(".card-services");
-  } else if (currentLocation.includes("contact")) {
+  } else if (currentLocation.includes("contacto")) {
     //Init gmaps
     insertGmapScript();
     validateForm();
