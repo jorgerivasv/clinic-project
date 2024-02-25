@@ -19,7 +19,7 @@ exports.handler = async (event, context) => {
   if (emailData.name && emailData.phone && emailData.description) {
     try {
       const { data, error } = await resend.emails.send({
-        from: `Biodentric <onboarding@resend.com>`,
+        from: `Biodentric <martinrivasvesco@biodentric.cl>`,
         to: ["martinrivasvesco@gmail.com"],
         subject: `Contacto de parte del cliente ${emailData.name}`,
         html: `<div><p>El cliente que se contacta tiene por nombre: 
