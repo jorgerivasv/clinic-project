@@ -5,8 +5,7 @@ const { Resend } = require("resend"); // Asegúrate de tener esta librería disp
 const resend = new Resend(process.env.RESEND_TOKEN);
 
 exports.handler = async (event, context) => {
-  const origin =
-    event.headers["Origin"] || event.headers["Referer"] || "Desconocido";
+  const origin = event.headers;
 
   if (event.httpMethod !== "POST") {
     return {
