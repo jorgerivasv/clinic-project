@@ -128,7 +128,7 @@ export function handleWorkerProfesionalInfo(className) {
   };
   const actionSelector = (elementName) => {
     if (elementName.textContent.toLowerCase() === "martin rivas") {
-      linkToClick("https://www.instagram.com/dr.m.rivas/");
+      linkToClick("https://www.instagram.com/martinrivas.ro/");
     }
     if (elementName.textContent.toLowerCase() === "nicole pacheco") {
       linkToClick(
