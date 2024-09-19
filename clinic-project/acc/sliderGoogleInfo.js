@@ -2,7 +2,10 @@ export const sliderGoogleInfo = async () => {
   const serverUrl = "https://biodentric-server.vercel.app";
   const options = {
     method: "GET",
-    headers: { "User-Agent": "insomnia/9.3.3" },
+    headers: {
+      "User-Agent": "insomnia/9.3.3",
+      "Content-Type": "application/json",
+    },
   };
   try {
     const request = await fetch(`${serverUrl}/api/reviews`, options);

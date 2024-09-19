@@ -163,7 +163,6 @@ export function searchPage(link) {
               </div></div>`;
                 $carouselContainer.appendChild(listElement);
               });
-              console.log(document.getElementById("carousel-google-container"));
             }
           }
 
