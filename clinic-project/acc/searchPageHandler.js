@@ -178,7 +178,7 @@ export function searchPage(link) {
             mode: "carousel", // or 'gallery'
             mouseDrag: true,
             navPosition: "bottom",
-            autoplay: false,
+            autoplay: true,
             autoplayButtonOutput: false,
             loop: true,
             gutter: 0,
