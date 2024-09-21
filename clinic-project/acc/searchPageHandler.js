@@ -131,6 +131,9 @@ export function searchPage(link) {
             if ($carouselContainer) {
               resp.data.forEach((data) => {
                 const listElement = document.createElement("li");
+                function truncateString(str, num) {
+                  return str.length > num ? str.slice(0, num) + "..." : str;
+                }
                 const ratingStars = () => {
                   const rating = data.rating;
                   const emptyStars = rating - 5;
@@ -148,14 +151,19 @@ export function searchPage(link) {
                   return stars.toString().replaceAll(",", "");
                 };
                 listElement.innerHTML = ` <div class="testimonial-container"><div class="testimonial-card">
-                <div class="testimonial-img"><img src="${
+                <div class="testimonial-header"><div class="testimonial-img"><img src="${
                   data.profile_photo_url
-                }" alt="profile-picture"></div>
+                }" alt="profile-picture"></div> <p class="is-size-4 has-text-centered">${
+                  data.author_name
+                }</p>
+                  <div class="testimonial-stars">${ratingStars()}</div></div>
                 <div class="testimonial-body has-text-white">
-                  <p class="is-size-4 has-text-centered">${data.author_name}</p>
-                  <div class="testimonial-stars">${ratingStars()}</div>
-                  <p class="is-size-6 has-text-centered"> ${data.text}
-                  </p>
+                  <div class="testimonial-text"><details><summary><span>${truncateString(
+                    data.text,
+                    100
+                  )}</span></summary><p>${data.text}</p></details></div>
+
+
                   <div class="testimonial-google-icon"><a href=${
                     data.author_url
                   } target="_blank" rel="noopener noreferrer"><img src="/public/google-icon.webp" alt="google-icon"/></a></div>
@@ -170,7 +178,7 @@ export function searchPage(link) {
             mode: "carousel", // or 'gallery'
             mouseDrag: true,
             navPosition: "bottom",
-            autoplay: true,
+            autoplay: false,
             autoplayButtonOutput: false,
             loop: true,
             gutter: 0,

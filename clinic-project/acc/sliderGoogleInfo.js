@@ -1,4 +1,5 @@
 export const sliderGoogleInfo = async () => {
+  /*biodentric-server.vercel.app */
   const serverUrl = "https://biodentric-server.vercel.app";
   const options = {
     method: "GET",

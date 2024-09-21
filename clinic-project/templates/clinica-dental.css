@@ -94,12 +94,56 @@ div.dental-card-after:hover > img {
 }
 
 .testimonial-card {
+  min-height: 380px;
   width: 100%;
   overflow: hidden;
   border-radius: 8px;
   color: white;
   border: 2px solid var(--light-gray);
   padding: 1rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.testimonial-text {
+  details {
+    max-height: 100px;
+    overflow: hidden;
+  }
+  details[open] {
+    max-height: 100%;
+    overflow: unset;
+  }
+  details > summary {
+    text-overflow: ellipsis;
+  }
+  details > summary > span {
+    font-family: var(--third-font);
+  }
+  details[open] > summary > span {
+    display: none;
+  }
+  details[open] > summary::after {
+    content: " Ver menos";
+    cursor: pointer;
+    color: #00d1b2;
+    font-weight: 600;
+  }
+  details > p {
+    font-weight: 400;
+    text-align: start;
+  }
+  summary::marker {
+    content: "";
+  }
+  summary::after {
+    content: " Ver más";
+    cursor: pointer;
+    color: #00d1b2;
+    font-weight: 600;
+  }
 }
 
 .testimonial-img {
@@ -148,7 +192,11 @@ div.testimonial-stars img {
 }
 
 .testimonial-body {
-  padding: 0 1rem 1rem 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .testimonial-body p:nth-child(3) {
