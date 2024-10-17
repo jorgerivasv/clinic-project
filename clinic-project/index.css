@@ -96,21 +96,38 @@ nav.navbar.sticky-navbar {
   background-color: var(--black);
 }
 
+.navbar-schedule-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 2rem;
+}
+
+.navbar-schedule-item a.navbar-item {
+  padding: 0.5rem 2rem;
+}
+
 a.navbar-item img {
   max-height: fit-content;
 }
 
 a.navbar-item {
   color: var(--white);
-  padding: 0 1rem;
+  padding: 0rem 1rem;
 }
 
-@media all and (max-width: 480px) {
+@media all and (max-width: 780px) {
+  .navbar-schedule-item {
+    margin: 1rem 0;
+    padding: 0 1rem;
+  }
+  .navbar-schedule-item a.navbar-item {
+    width: 100%;
+  }
   a.navbar-item {
     padding: 0.5rem 1rem;
   }
 }
-
 .navbar-start > a.navbar-item:hover {
   color: var(--white);
   background-color: initial;
